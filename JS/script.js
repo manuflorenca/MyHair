@@ -3,8 +3,8 @@ const t_field_senha=document.querySelector("#senha");
 const form_login=document.querySelector("#form_login")
 
 
-const validName = '';
-const validPassword = '';
+const validName = 'manu';
+const validPassword = '123';
 
 function entrarSistema(e){
     // e.preventDefault();

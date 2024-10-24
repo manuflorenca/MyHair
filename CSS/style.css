@@ -3,6 +3,12 @@ body{
 }
 
 .caixa {
-    background-color: rgba(10,23,55,0.5);
+    background-image: url(/assets/backItens.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+label {
     border-radius: 20px;
 }
