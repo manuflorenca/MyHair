@@ -10,13 +10,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Bootstrap
+        </a>
+    </nav>
+
     <main>
 
+    <div class="caixaLogin" >
         <form id="form_login" class="d-flex flex-column justify-content-around h-50">
             <div class="h-50 w-100 d-flex flex-column justify-content-between">
                 <div class="h-50 w-100">
-                    <label for="email" class="fs-6">EMAIL</label>
-                    <input id="email" name="email" type="email" class="w-100">
+                    <label for="nome" class="fs-6">Nome</label>
+                    <input id="nome" name="nome" type="text" class="w-100">
                 </div>
                 <div class="h-50 w-100">
                     <label for="senha" class="fs-6">SENHA</label>
@@ -26,8 +35,69 @@
             <a href="#" class="text_senha">esqueci minha senha</a>
             <button type="submit" class="btn_entrar">ENTRAR</button>
         </form>
+    </div>
 
     </main>
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+      
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-body">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-body">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-body">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-body">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0">Links</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="text-body">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-body">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-body">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-body">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2020 Copyright:
+          <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
