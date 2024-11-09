@@ -38,7 +38,7 @@ a {
 
 /* Tela de login */
 
-.wrapper{
+.wrapper {
     position: relative;
     width: 400px;
     height: 440px;
@@ -49,40 +49,38 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden;
+    transform: scale(0); */
     transition: height .2s ease;
 }
 
+/* Tela de login */
 .wrapper .form-box.login {
     transition: transform .18s ease;
     transform: translateX(0);
+    position: absolute;
+    width: 100%;
 }
 
-.wrapper.active .form-box.login{
-    transition: none;
+
+.wrapper.active .form-box.login {
     transform: translateX(-400px);
-
 }
 
-.wrapper.active {
-    height: 520px;
-
-}
-
+/* Tela de cadastro */
 .wrapper .form-box.register {
     position: absolute;
-    transition: none;
-    transform: translateX(400px);
-
-}
-
-.wrapper.active .form-box.register{
     transition: transform .18s ease;
-    transform: translateX(0);
-
+    transform: translateX(400px); 
 }
 
 
-.wrapper .icon-close{
+.wrapper.active .form-box.register {
+    transform: translateX(0); 
+}
+
+
+.wrapper .icon-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -98,5 +96,4 @@ a {
     border-bottom-left-radius: 10px;
     cursor: pointer;
     z-index: 1;
-
 }
