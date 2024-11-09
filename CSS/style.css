@@ -1,14 +1,102 @@
-body{
-    background-color: #F2F2F2;
+body {
+    background-color: #F2F2F2 ;
 }
 
-.caixa {
-    background-image: url(/assets/backItens.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
+#navbar {
+    background-color: transparent;
 }
 
-label {
-    border-radius: 20px;
+hr {
+    color: #401708;
+}
+
+.card-transparente {
+    background-color: transparent;
+    border: none; 
+  }
+
+  div.scroll-container {
+    background-color:transparent;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+
+  footer{
+    background-color: #401708;
+    color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* Tela de login */
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background-color: #F2EADF ;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height .2s ease;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+
+}
+
+.wrapper.active {
+    height: 520px;
+
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #401708;
+    font-size: 2em;
+    color: #F2EADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+
 }
