@@ -1,5 +1,40 @@
-💇‍♀️✨ My Hair
+##💇‍♀️✨ My Hair
 Bem-vindo(a) ao My Hair! Um site desenvolvido para quem ama cuidar dos cabelos e deseja encontrar informações e serviços relacionados ao universo da beleza capilar. Nosso objetivo é proporcionar uma experiência completa, desde dicas de cuidados até a busca pelos melhores salões e profissionais da sua região.
+
+## 🤝 Colaboradores
+<table>
+  <tr>
+    <td colspan='5'>
+      <p>Front-End</p>
+    </td>
+  </tr>
+    <td align="center">
+      <a href="https://github.com/manuflorenca" title="GitHub da Manuela Florença">
+        <img src="https://avatars.githubusercontent.com/u/160082556?v=4" width="100px;" alt="Foto da Manuela Florença no GitHub"/><br>
+        <b>Manuela Florença</b>
+      </a>
+    </td>
+  <tr>
+    <td colspan='5'>
+      <p>Banco de Dados</p>
+       <tr>
+    <td align="center">
+      <a href="https://github.com/OJoaoMatos" title="GitHub do João Matos">
+        <img src="https://avatars.githubusercontent.com/u/174015355?v=4" width="100px;" alt="Foto do João Matos no GitHub"/><br>
+        <b>João Matos</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Oescobarm" title="GitHub do Mateus Escobar">
+        <img src="https://avatars.githubusercontent.com/u/174015474?v=4" width="100px;" alt="Foto do Mateus Escobar no GitHub"/><br>
+        <b>Mateus Escobar</b>
+      </a>
+    </td>
+  </tr>
+    </td>
+  </tr>
+  
+</table>
 
 🌟 Funcionalidades
 Home Page Interativa: Navegação intuitiva com banners de promoções e destaques.
