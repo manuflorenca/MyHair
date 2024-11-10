@@ -75,6 +75,6 @@ JavaScript: Interatividade e animações leves para uma navegação fluida.
 Bootstrap: Componentes estilizados que garantem uma interface moderna e elegante.
 PHP e MySQL: Para funcionalidades de backend como agendamento e armazenamento de dados.
 
-Agradecemos por fazer parte dessa jornada de beleza e bem-estar com o My Hair. Seu cabelo merece o melhor! 💇‍♀️💖
+## Agradecemos por fazer parte dessa jornada de beleza e bem-estar com o My Hair. Seu cabelo merece o melhor! 💇‍♀️💖
 
 
