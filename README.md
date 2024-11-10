@@ -1,7 +1,7 @@
-##💇‍♀️✨ My Hair
+## My Hair
 Bem-vindo(a) ao My Hair! Um site desenvolvido para quem ama cuidar dos cabelos e deseja encontrar informações e serviços relacionados ao universo da beleza capilar. Nosso objetivo é proporcionar uma experiência completa, desde dicas de cuidados até a busca pelos melhores salões e profissionais da sua região.
 
-## 🤝 Colaboradores
+## Desenvolvedores
 <table>
   <tr>
     <td colspan='5'>
