@@ -7,6 +7,8 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: #F2F2F2 ;
+    width: 100vw;
+    height: 100vh;
 }
 
 #navbar {
@@ -169,3 +171,76 @@ a {
     }
 }
 
+/* Estilização da Header */
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color:transparent;
+    position: relative;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2; 
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 50vw;
+    height: 100vh;
+    background-color: #D9A76A;
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    text-align: center;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 15px;
+    color: #401708;
+    text-decoration: none;
+}
+
+#btnPopup {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .navbar ul li a {
+        padding: 10px;
+    }
+}

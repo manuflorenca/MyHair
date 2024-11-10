@@ -1,3 +1,5 @@
+const menuBtn = document.getElementById('menu-btn');
+const sidebar = document.getElementById('sidebar');
 const wrapper = document.querySelector('.wrapper');
 const btnPopup = document.querySelector('#btnPopup');
 const iconClose = document.querySelector('.icon-close');
@@ -22,4 +24,9 @@ registerLink.addEventListener('click', () => {
 
 loginLink.addEventListener('click', () => {
     wrapper.classList.remove('active');
+});
+
+
+menuBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
 });

@@ -14,19 +14,32 @@
 </head>
 <body>
 <!-- Nav --> 
-  <nav class="navbar">
-    <div class="container">
-      <div class="d-flex w-100 justify-content-between align-items-center">
-        <a class="navbar-brand" href="#">
+<header class="header">
+  <div class="menu-container">
+      <button id="menu-btn" class="menu-btn">
           <img src="../assets/menu.png" alt="Menu">
-        </a>
-        <a href="#">
-          <button id="btnPopup" ><img src="../assets/user.png" width="40px" alt=""></button>
-        </a>
+      </button>
+      <div id="sidebar" class="sidebar"> 
+          <nav class="navbar">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Agenda</a></li>
+                  <li><a href="#">Serviços</a></li>
+                  <li><a href="#">Cabeleleiras</a></li>
+              </ul>
+          </nav>
       </div>
-    </div>
-  </nav>
-  <hr style="border: 2px solid " >
+  </div>
+
+  <!-- Botão de Popup (à direita) -->
+  <a href="#">
+      <button id="btnPopup">
+          <img src="../assets/user.png" width="40px" alt="User Icon">
+      </button>
+  </a>
+</header>
+<hr style="border: 2px solid;">
+
 <!-- Tela de login --> 
     <div class="wrapper">
       <span class="icon-close">
