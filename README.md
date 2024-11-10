@@ -49,8 +49,11 @@ Catálogo de Serviços: Veja a variedade de serviços oferecidos, desde cortes e
 Busca por Profissionais: Encontre os melhores cabeleireiros e salões próximos a você.
 Blog com Dicas: Acesse artigos sobre cuidados capilares, tendências de cortes e colorações.
 Sistema de Agendamento Online: Agende serviços diretamente pelo site de forma prática e rápida.
+
 🛠️ Tecnologias Utilizadas
+
 HTML5 e CSS3: Estrutura e design responsivo para uma experiência visual agradável em dispositivos de todos os tamanhos.
+
 JavaScript: Funcionalidades dinâmicas para uma interação mais rica com o usuário.
 Bootstrap: Estilização e componentes prontos para garantir uma interface elegante e moderna.
 MySQL: Para integração com banco de dados e funcionalidade de agendamento.
