@@ -70,10 +70,10 @@ Imagens Inspiradoras: Fotografias de alta qualidade de cortes de cabelo, pentead
 ##  🛠️ Tecnologias Utilizadas
 Para construir uma experiência sólida e atraente, utilizamos:
 
-HTML5 e CSS3: Estrutura e estilo responsivo, adaptável a qualquer dispositivo.
-JavaScript: Interatividade e animações leves para uma navegação fluida.
-Bootstrap: Componentes estilizados que garantem uma interface moderna e elegante.
-PHP e MySQL: Para funcionalidades de backend como agendamento e armazenamento de dados.
+## HTML5 e CSS3: Estrutura e estilo responsivo, adaptável a qualquer dispositivo.
+## JavaScript: Interatividade e animações leves para uma navegação fluida.
+## Bootstrap: Componentes estilizados que garantem uma interface moderna e elegante.
+## MySQL: Para funcionalidades de backend como agendamento e armazenamento de dados.
 
 ## Agradecemos por fazer parte dessa jornada de beleza e bem-estar com o My Hair. Seu cabelo merece o melhor! 💇‍♀️💖
 
