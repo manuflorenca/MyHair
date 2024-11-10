@@ -30,6 +30,12 @@ Bem-vindo(a) ao My Hair! Um site desenvolvido para quem ama cuidar dos cabelos e
         <b>Mateus Escobar</b>
       </a>
     </td>
+     <td align="center">
+      <a href="https://github.com/Danisouza2" title="GitHub da Daniele Todão">
+        <img src="https://avatars.githubusercontent.com/u/168936904?v=4" width="100px;" alt="Foto da Daniele Todão no GitHub"/><br>
+        <b>Daniele Todão</b>
+      </a>
+    </td>
   </tr>
     </td>
   </tr>
