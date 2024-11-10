@@ -40,11 +40,11 @@
   
 </table>
 
-💇‍♀️🌟 My Hair: Sua Beleza, Nossa Paixão!
+## 💇‍♀️🌟 My Hair: Sua Beleza, Nossa Paixão!
 Transforme seu visual e eleve sua autoestima com o My Hair, o site que conecta você aos melhores profissionais e serviços de beleza capilar.
 Seja você mesma(o), com o cabelo dos seus sonhos! ✨💖
 
-🌐 Sobre o Projeto
+## 🌐 Sobre o Projeto
 My Hair é um site dedicado aos amantes de beleza e cuidados capilares. Criamos um espaço digital onde você pode encontrar inspiração, aprender sobre tendências e reservar serviços em salões de beleza perto de você. Nosso objetivo é tornar sua experiência com o cuidado do cabelo mais fácil, acessível e divertida.
 
 🔍 Explore o Mundo My Hair:
@@ -114,39 +114,7 @@ HTML5 e CSS3: Estrutura e estilo responsivo, adaptável a qualquer dispositivo.
 JavaScript: Interatividade e animações leves para uma navegação fluida.
 Bootstrap: Componentes estilizados que garantem uma interface moderna e elegante.
 PHP e MySQL: Para funcionalidades de backend como agendamento e armazenamento de dados.
-🚀 Como Rodar o Projeto Localmente
-Clone o repositório e execute o projeto localmente seguindo os passos abaixo:
 
-Clone o projeto:
-bash
-Copiar código
-git clone https://github.com/seu-usuario/my-hair.git
-Acesse a pasta do projeto:
-bash
-Copiar código
-cd my-hair
-Abra o arquivo index.html no navegador:
-bash
-Copiar código
-start index.html
-📂 Estrutura do Projeto
-bash
-Copiar código
-MyHair/
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── styles/
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── pages/
-│   ├── catalog.html
-│   ├── blog.html
-│   └── contact.html
-├── index.html
-└── README.md
 📢 Contribuições
 Adoraríamos ver a comunidade crescer com o My Hair! Se você tem ideias para melhorar o site ou deseja contribuir, siga estas etapas:
 
