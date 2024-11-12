@@ -92,7 +92,6 @@ a {
     transition: transform .18s ease;
     transform: translateX(0);
     position: absolute;
-    width: 100%;
 }
 .wrapper.active .form-box.login {
     transform: translateX(-400px);
@@ -196,36 +195,26 @@ a {
     z-index: 2; 
 }
 
-.sidebar {
-    position: absolute;
-    top: 0;
-    left: -100%; 
-    width: 50vw;
-    height: 100vh;
-    background-color: #D9A76A;
-    transition: left 0.5s;
-    z-index: 1;
+.offcanvas{
+    background-color: #260E05;
 }
 
-.sidebar.show {
-    left: 0;
+.offcanvas-header {
+    color: #F2F2F2;
 }
 
-.navbar ul {
+.offcanvas-body{
+    background-color: #F2EADF;
+}
+
+.offcanvas-body ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    font-size: larger;
+    color: #260E05;
 }
 
-.navbar ul li {
-    text-align: center;
-}
-
-.navbar ul li a {
-    display: block;
-    padding: 15px;
-    color: #401708;
-    text-decoration: none;
+.offcanvas-body ul li:hover {
+    color: #8C5627;
 }
 
 #btnPopup {

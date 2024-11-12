@@ -16,19 +16,21 @@
 <!-- Nav --> 
 <header class="header">
   <div class="menu-container">
-      <button id="menu-btn" class="menu-btn">
-          <img src="../assets/menu.png" alt="Menu">
-      </button>
-      <div id="sidebar" class="sidebar"> 
-          <nav class="navbar">
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Agenda</a></li>
-                  <li><a href="#">Serviços</a></li>
-                  <li><a href="#">Cabeleleiras</a></li>
-              </ul>
-          </nav>
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img src="../assets/menu.png" alt=""></button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      <div class="offcanvas-body">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Agenda</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Cabeleleiras</a></li>
+      </ul>
+      </div>
+    </div>
   </div>
 
   <!-- Botão de Popup (à direita) -->
