@@ -48,16 +48,16 @@
         <i class="bi bi-x"></i>
       </span>
       <div class="form-box login">
-        <div class="form">
+        <div id="formLogin">
           <div>
             <img src="../assets/FazerLogin.png" alt="">
             <img src="../assets/UserTelaLogin.png" alt="">
           </div>
           <div class="input-box">
-            <input type="name" placeholder="Nome">
+            <input id="nome" type="name" placeholder="Nome">
           </div>
           <div class="input-box">
-            <input type="password" placeholder="Senha">
+            <input id="senha" type="password" placeholder="Senha">
           </div>
           <button type="submit" class="btn">Entrar</button>
           <div class="login-register">
@@ -83,6 +83,7 @@
             <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
           </div>
         </div>
+        <div id="error-message" style="color: red;"></div> <!-- Adiciona um espaço para a mensagem de erro -->
       </div>
     </div>
 <!-- Card principal -->
