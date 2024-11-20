@@ -1,5 +1,7 @@
 *{
-    font-family: "Karla", sans-serif;
+    font-family: "Manjari", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 body {
@@ -232,4 +234,47 @@ a {
     .navbar ul li a {
         padding: 10px;
     }
+}
+
+/* Parte das cabeleireiras */
+
+h1 {
+    color: #260E05;
+}
+
+h2{
+    color: #260E05;
+}
+
+/* Serviço detalhado */
+
+.btnAgenda{
+    background-color: #401708;
+    color: #F2EADF;
+    border: none;
+    border-radius: 7px;
+    width: 80px;
+    height: 30px;
+}
+
+.btnFinal{
+    width: 214px;
+    height: 30px;
+    border-radius: 7px;
+    background: #401708;
+    color: #F2EADF;
+    border: none;
+
+}
+
+/* Escolha de cabelereiras */
+
+.btnDrop {
+    width: 350px;
+    height: 44px;
+    border-radius: 5px;
+    border: 2px solid #401708;
+    background: rgba(242, 234, 223, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
