@@ -1,3 +1,10 @@
+
+if (!localStorage.getItem('isLoggedIn')) {
+  window.location.href = 'index.html'; // Redireciona para a página de login
+}
+
+// calendario
+
 const isLeapYear = (year) => {
     return (
       (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||

@@ -20,7 +20,7 @@
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
-        <button type="button" class="btn-close text-light " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul>
@@ -28,7 +28,7 @@
           <li><a href="/HTML/agenda.html">Agenda</a></li>
           <li><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
           <li><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
-      </ul>
+        </ul>
       </div>
     </div>
   </div>
@@ -41,123 +41,129 @@
   </a>
 </header>
 
+<div class="container">
+  <h1 class="text-center">Bem-vindo à Página Inicial</h1>
+  <div id="welcomeMessage" class="text-center"></div>
+  
+  <!-- Botão para acessar a agenda -->
+  <div class="text-center" id="agendaButtonContainer" style="display: none;">
+      <a href="/HTML/agenda.html" class="btn btn-primary">Acessar Agenda</a>
+  </div>
+</div>
 
 <!-- Tela de login --> 
-    <div class="wrapper">
-      <span class="icon-close">
-        <i class="bi bi-person-fill"></i>
-      </span>
-      <div class="form-box login">
-        <div id="formLogin">
-          <div>
-            <img src="../assets/FazerLogin.png" alt="">
-            <img src="../assets/UserTelaLogin.png" alt="">
-          </div>
-          <div class="input-box">
-            <input id="nome" type="name" placeholder="Nome">
-          </div>
-          <div class="input-box">
-            <input id="senha" type="password" placeholder="Senha">
-          </div>
-          <button type="submit" class="btn">Entrar</button>
-          <div class="login-register">
-            <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
-          </div>
-        </div>
+<div class="wrapper">
+  <span class="icon-close">
+    <i class="bi bi-x-lg"></i>
+  </span>
+  <div class="form-box login">
+    <form id="formLogin"> <!-- Adicionei a tag <form> aqui -->
+      <div>
+        <img src="../assets/FazerLogin.png" alt="">
+        <img src="../assets/UserTelaLogin.png" alt="">
       </div>
-      <!-- Tela de cadastro -->
-      <div class="form-box register">
-        <div class="form">
-          <div>
-            <img src="../assets/FazerCadastro.png" width="200px" alt="">
-            <img src="../assets/UserTelaLogin.png" alt="">
-          </div>
-          <div class="input-box">
-            <input type="name" placeholder="Nome">
-          </div>
-          <div class="input-box">
-            <input type="password" placeholder="Senha">
-          </div>
-          <button type="submit" class="btn">Cadastrar</button>
-          <div class="login-register">
-            <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
-          </div>
-        </div>
-        <div id="error-message" style="color: red;"></div> <!-- Adiciona um espaço para a mensagem de erro -->
+      <div class="input-box">
+        <input id="nome" type="text" placeholder="Nome" required>
       </div>
-    </div>
-<!-- Card principal -->
-  <div class="card card-transparente align-items-center ">
-    <div class="card-body">
-      <img class="img-desktop" src="../assets/RetanguloTesteDesktop.png" alt="Imagem Desktop">
-      <img class="img-mobile" src="../assets/RetanguloTeste.png" alt="Imagem Mobile">
+      <div class="input-box">
+        <input id="senha" type="password" placeholder="Senha" required>
+      </div>
+      <button id="loginBtn" type="submit" class="btn">Entrar</button>
+      <div class="login-register">
+        <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
+      </div>
+      <div id="error-message" style="color: red;"></div> <!-- Adiciona um espaço para a mensagem de erro -->
+    </form> <!-- Fechei a tag <form> aqui -->
+  </div>
+  <!-- Tela de cadastro -->
+  <div class="form-box register">
+    <div class="form">
+      <div>
+        <img src="../assets/FazerCadastro.png" width="200px" alt="">
+        <img src="../assets/UserTelaLogin.png" alt="">
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Nome" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Senha" required>
+      </div>
+      <button type="submit" class="btn">Cadastrar</button>
+      <div class="login-register">
+        <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- Card principal -->
+<div class="card card-transparente align-items-center ">
+  <div class="card-body">
+    <img class="img-desktop" src="../assets/RetanguloTesteDesktop.png" alt="Imagem Desktop">
+    <img class="img-mobile" src="../assets/RetanguloTeste.png" alt="Imagem Mobile">
+  </div>
+</div>
+
 <!-- Titulo-->
 <h1 class="text-center">Nossos Serviços</h1>
 
 <!-- Card scroll -->
 <div class="scroll-container">
-
   <div class="card card-transparente" style="width: 13rem;">
-      <div class="card-body">
-        <a href="/HTML/corteFeminino.html"><img src="../assets/QuadradoTeste.png" alt=""></a>
-        <h5 class="card-title">Corte Feminino</h5>
-      </div>
+    <div class="card-body">
+      <a href="/HTML/corteFeminino.html"><img src="../assets/QuadradoTeste.png" alt=""></a>
+      <h5 class="card-title">Corte Feminino</h5>
+    </div>
   </div>
-
   <div class="card card-transparente" style="width: 13rem;">
     <div class="card-body">
       <a href="/HTML/corteMasculino.html"><img src="../assets/QuadradoTeste.png" alt=""></a>
       <h5 class="card-title">Corte Masculino</h5>
     </div>
   </div>
-
   <div class="card card-transparente" style="width: 13rem;">
     <div class="card-body">
       <a href="/HTML/escova.html"><img src="../assets/QuadradoTeste.png" alt=""></a>
       <h5 class="card-title">Escova</h5>
     </div>
   </div>
-
   <div class="card card-transparente" style="width: 13rem;">
     <div class="card-body">
       <a href="/HTML/tintura.html"><img src="../assets/QuadradoTeste.png" alt=""></a>
       <h5 class="card-title">Tintura</h5>
     </div>
   </div>
-
 </div>
 
 <!-- Footer -->
-    <footer class="text-center text-lg-start">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!"><i class="bi bi-geo-alt-fill"> Localização</i></a>
-                </li>
-                <li>
-                  <a href="#!" ><i class="bi bi-whatsapp"> Whatsapp</i></a>
-                </li>
-              </ul>
-            </div>
+<footer class="text-center text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!"><i class="bi bi-geo-alt-fill"> Localização</i></a>
+          </li>
+          <li>
+            <a href="#!"><i class="bi bi-whatsapp"> Whatsapp</i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!"><i class="bi bi-instagram"> Instagram</i></a>
+          </li>
+          <li>
+            <a href="#!"><i class="bi bi-facebook"> Facebook</i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-      
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!"><i class="bi bi-instagram"> Instagram</i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="bi bi-facebook"> Facebook</i></a>
-                </li>
-              </ul>
-            </div>
-        </div>
-    </footer>
-    <script src="../JS/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../JS/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
