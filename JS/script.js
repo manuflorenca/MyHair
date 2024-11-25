@@ -5,37 +5,37 @@ const btnPopup = document.querySelector('#btnPopup');
 const iconClose = document.querySelector('.icon-close');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
-const t_field_nome = document.querySelector("#nome");
-const t_field_senha = document.querySelector("#senha");
-const form_login = document.querySelector("#formLogin");
-const errorMessage = document.getElementById('error-message');
+// const t_field_nome = document.querySelector("#nome");
+// const t_field_senha = document.querySelector("#senha");
+// const form_login = document.querySelector("#formLogin");
+// const errorMessage = document.getElementById('error-message');
 
-const validNome = 'user';
-const validPassword = '123';
+// const validNome = 'user';
+// const validPassword = '123';
 
-// Função para realizar login
-function entrarConta(e) {
-    e.preventDefault(); // Impede o envio do formulário
+// // Função para realizar login
+// function entrarConta(e) {
+//     e.preventDefault(); // Impede o envio do formulário
 
-    if (t_field_nome.value === validNome && t_field_senha.value === validPassword) {
-        // Login bem-sucedido, armazena no localStorage
-        localStorage.setItem('isLoggedIn', 'true');
-        window.location.href = '../HTML/agenda.html'; // Redireciona para a agenda
-    } else {
-        // Exibe a mensagem de erro
-        errorMessage.textContent = 'Nome ou senha incorretos';
-    }
-}
+//     if (t_field_nome.value === validNome && t_field_senha.value === validPassword) {
+//         // Login bem-sucedido, armazena no localStorage
+//         localStorage.setItem('isLoggedIn', 'true');
+//         window.location.href = '../HTML/agenda.html'; // Redireciona para a agenda
+//     } else {
+//         // Exibe a mensagem de erro
+//         errorMessage.textContent = 'Nome ou senha incorretos';
+//     }
+// }
 
-// Associando o evento submit ao formulário
-form_login.addEventListener("submit", entrarConta);
+// // Associando o evento submit ao formulário
+// form_login.addEventListener("submit", entrarConta);
 
-// Verificação para redirecionar se já estiver logado
-window.onload = function() {
-    if (localStorage.getItem('isLoggedIn')) {
-        window.location.href = '../HTML/agenda.html';
-    }
-}
+// // Verificação para redirecionar se já estiver logado
+// window.onload = function() {
+//     if (localStorage.getItem('isLoggedIn')) {
+//         window.location.href = '../HTML/agenda.html';
+//     }
+// }
 
 btnPopup.addEventListener('click', () => {
     wrapper.classList.add('active-popup');

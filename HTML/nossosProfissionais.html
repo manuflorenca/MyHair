@@ -14,35 +14,32 @@
 </head>
 <body>
 
-    <!-- Nav -->
-
-    <header class="header">
-        <div class="menu-container">
-          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img src="../assets/menu.png" alt=""></button>
-      
-          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div class="offcanvas-header">
-              <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul>
-                <li><a href="/HTML/index.html">Home</a></li>
-                <li><a href="/HTML/agenda.html">Agenda</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="/HTML/cabeleireiras.html">Cabeleleiras</a></li>
-            </ul>
-            </div>
-          </div>
+  <header class="header" id="navbar">
+    <div class="menu-container">
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+  
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      
-        <!-- Botão de Popup (à direita) -->
-        <a href="#">
-            <button id="btnPopup">
-                <img src="../assets/user.png" width="40px" alt="User Icon">
-            </button>
-        </a>
-    </header>
-    <hr style="border: 2px solid;">
+        <div class="offcanvas-body">
+          <ul>
+            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/HTML/agenda.html">Agenda</a></li>
+            <li><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
+            <li><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Botão de Popup (à direita) -->
+    <a href="#">
+        <button id="btnPopup">
+          <i class="bi bi-person-fill fs-1 text-light"></i>
+        </button>
+    </a>
+  </header>
 
     <!-- Tela de login --> 
     <div class="wrapper">
