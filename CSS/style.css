@@ -319,7 +319,19 @@ h2{
 
 }
 
+.form-group input:hover {
+    border-radius: 5px;
+    background: rgba(143, 134, 123, 0.5);
+
+}
+
 .form-group select {
+    border-radius: 5px;
+    background: rgba(191, 179, 164, 0.50);
+
+}
+
+.form-group select:hover {
     border-radius: 5px;
     background: rgba(191, 179, 164, 0.50);
 
