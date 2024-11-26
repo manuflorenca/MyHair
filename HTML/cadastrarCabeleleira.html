@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casdatro profissional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../assets/logo (2).png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F2EADF;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="navbar">
+        <div class="menu-container">
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+      
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul>
+                <li><a href="/HTML/index.html">Home</a></li>
+                <li><a href="/HTML/agenda.html">Agenda</a></li>
+                <li><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
+                <li><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Botão de Popup (à direita) -->
+        <a href="#">
+            <button id="btnPopup">
+              <i class="bi bi-person-fill fs-1 text-light"></i>
+            </button>
+        </a>
+      </header>
+
+      <!-- Tela de login --> 
+<div class="wrapper">
+    <span class="icon-close">
+      <i class="bi bi-x"></i>
+    </span>
+    <div class="form-box login">
+      <div id="formLogin">
+        <div>
+          <img src="../assets/FazerLogin.png" alt="">
+          <img src="../assets/UserTelaLogin.png" alt="">
+        </div>
+        <div class="input-box">
+          <input id="nome" type="name" placeholder="Nome">
+        </div>
+        <div class="input-box">
+          <input id="senha" type="password" placeholder="Senha">
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+        <div class="login-register">
+          <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Tela de cadastro -->
+    <div class="form-box register">
+      <div class="form">
+        <div>
+          <img src="../assets/FazerCadastro.png" width="200px" alt="">
+          <img src="../assets/UserTelaLogin.png" alt="">
+        </div>
+        <div class="input-box">
+          <input type="name" placeholder="Nome">
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Senha">
+        </div>
+        <button type="submit" class="btn">Cadastrar</button>
+        <div class="login-register">
+          <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
+        </div>
+      </div>
+      <div id="error-message" style="color: red;"></div> <!-- Adiciona um espaço para a mensagem de erro -->
+    </div>
+  </div>
+
+  <!-- Formulario de cadastro de profissional -->
+
+    <form class="d-inline-flex p-2 bd-highlight p-5">
+        <div class="form-group d-inline-flex p-2 bd-highlight ">
+        <label for="exampleFormControlFile1"><i class="bi bi-camera-fill fs-4"> Foto do(a) profissional:</i></label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </form>
+
+  <form class="d-flex flex-column bd-highlight p-5">
+    <div class="form-group   ">
+      <label for="exampleFormControlInput1"><i class="bi bi-person-fill fs-4"> Nome da cabeleireira:</i></label>
+      <input type="name" class="form-control d-flex justify-content-center align-items-center my-2 m-3 " id="exampleFormControlInput1">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1"><i class="bi bi-caret-down-fill fs-4"> Defina as funcionalidades do(a) profissional:</i></label>
+      <select class="form-control d-flex justify-content-center align-items-center my-1 m-3" id="exampleFormControlSelect1">
+        <option>Corte feminino</option>
+        <option>Progresiva</option>
+        <option>Corte masculino</option>
+        <option>Tintura</option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label for="exampleFormControlSelect2"><i class="bi bi-circle-fill fs-4"> Funcionalidades:</i></label>
+      <select multiple class="form-control d-flex justify-content-center align-items-center my-2 m-3" id="exampleFormControlSelect2">
+        <option>Corte feminino</option>
+        <option>Progresiva</option>
+        <option>Corte masculino</option>
+        <option>Tintura</option>
+
+      </select>
+    </div>
+  </form>
+
+  <script src="../JS/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
