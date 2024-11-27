@@ -42,17 +42,6 @@
   </a>
 </header>
 
-<div class="container">
-  <h1 class="text-center">Bem-vindo à Página Inicial</h1>
-  <div id="welcomeMessage" class="text-center"></div>
-  
-  <!-- Botão para acessar a agenda -->
-  <div class="text-center" id="agendaButtonContainer" style="display: none;">
-      <a href="/HTML/agenda.html" class="btn btn-primary">Acessar Agenda</a>
-      <h2></h2>
-  </div>
-</div>
-
 <!-- Tela de login --> 
 <div class="wrapper">
   <span class="icon-close">
@@ -72,16 +61,20 @@
       </div>
       <button id="loginBtn" type="submit" class="btn">Entrar</button>
 
-      <button id="loginBtn" type="submit" class="btn">Cliente</button>
-      <button id="loginBtn" type="submit" class="btn">Profisssional</button>
+      <select class="form-select form-select-lg mb-2 fs-6 my-2" aria-label="Small select example">
+        <option selected>Você é cliente ou profissional?</option>
+        <option value="1">Cliente</option>
+        <option value="2">Profissional</option>
+      </select>
 
      
       <div class="login-register">
         <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
       </div>
-      <div id="error-message" style="color: red;"></div> <!-- Adiciona um espaço para a mensagem de erro -->
-    </form> <!-- Fechei a tag <form> aqui -->
+      <div id="error-message" style="color: red;"></div> 
+    </form>
   </div>
+
   <!-- Tela de cadastro -->
   <div class="form-box register">
     <div class="form">
@@ -95,11 +88,14 @@
       <div class="input-box">
         <input type="password" placeholder="Senha" required>
       </div>
-      <div class="input-box">
-        <button>Cliente</button>
-        <button>Profissional</button>
-      </div>
+
       <button type="submit" class="btn">Cadastrar</button>
+
+      <select class="form-select form-select-lg mb-2 fs-6 my-2" aria-label="Small select example">
+        <option selected>Você é cliente ou profissional?</option>
+        <option value="1">Cliente</option>
+        <option value="2">Profissional</option>
+      </select>
 
       <div class="login-register">
         <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>

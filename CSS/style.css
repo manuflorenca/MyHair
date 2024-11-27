@@ -158,6 +158,16 @@ a {
     z-index: 1;
 }
 
+.form-select {
+    background-color: #401708;
+    color: #F2EADF;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+
+
+}
+
 /* Trocar elementos */
 
 .img-mobile {
