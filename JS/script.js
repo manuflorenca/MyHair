@@ -4,14 +4,6 @@ const wrapper = document.querySelector('.wrapper');
 const btnPopup = document.querySelector('#btnPopup');
 const iconClose = document.querySelector('.icon-close');
 const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const t_field_nome = document.querySelector("#nome");
-const t_field_senha = document.querySelector("#senha");
-const form_login = document.querySelector("#formLogin");
-const errorMessage = document.getElementById('error-message');
-
-
-
 
 
 
@@ -27,9 +19,9 @@ iconClose.addEventListener('click', () => {
 });
 
 
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active');
-});
+// registerLink.addEventListener('click', () => {
+//     wrapper.classList.add('active');
+// });
 
 
 loginLink.addEventListener('click', () => {

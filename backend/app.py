@@ -1,4 +1,4 @@
-API_USER="http://127.0.0.1:5501/HTML/index.html"
+API_USER='http://127.0.0.1:5000/usuario'
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -13,7 +13,7 @@ CORS(app)
 
 # Criar usuário
 # vai ter uma route e um method
-@app.route('/users', methods=['POST'])
+@app.route('/usuario', methods=['POST'])
 def create_user():
     # O data esta vindo do javascript json
     data = request.json
@@ -28,34 +28,34 @@ def create_user():
     return jsonify({"message": "User created successfully"}), 201
 
 # Listar usuários
-@app.route('/users', methods=['GET'])
+@app.route('/usuario', methods=['GET'])
 def get_users():
     conn = get_connection()
     #  vai buscar como dicionario
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM users")
+    cursor.execute("SELECT * FROM usuario")
 
     # Ele vai buscar todos como fetchall
     users = cursor.fetchall()
     return jsonify(users), 200
 
 # Atualizar usuário
-@app.route('/users/<int:id>', methods=['PUT'])
+@app.route('/usuario/<int:id>', methods=['PUT'])
 def update_user(id):
     data = request.json
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("UPDATE users SET nome=%s, senha=%s, WHERE id=%s", 
+    cursor.execute("UPDATE usuario SET nome=%s, senha=%s, WHERE id=%s", 
                    (data['nome'], data['senha'], id))
     conn.commit()
     return jsonify({"message": "User updated successfully"}), 200
 
 # Deletar usuário
-@app.route('/users/<int:id>', methods=['DELETE'])
+@app.route('/usuario/<int:id>', methods=['DELETE'])
 def delete_user(id):
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM users WHERE id=%s", (id,))
+    cursor.execute("DELETE FROM usuario WHERE id=%s", (id,))
     conn.commit()
     return jsonify({"message": "User deleted successfully"}), 200
 
