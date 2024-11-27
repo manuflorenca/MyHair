@@ -37,10 +37,6 @@ loginLink.addEventListener('click', () => {
 });
 
 
-btn.addEventListener('click', (e) => {
-    sidebar.classList.toggle('show');
-});
-
 
 
 

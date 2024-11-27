@@ -6,12 +6,14 @@ const nome=document.querySelector("#nome");
 const senha=document.querySelector("#senha");
 
 formLogin.addEventListener("submit",async (e)=>{
+
+    e.preventDefault()
     const response = await fetch(API_USER);
 
     // Esse é o nosso json
     const users = await response.json();
     const user = users.find(user => user.nome === nome.value && user.senha === senha.value);
-
+    console.log(users)
     if (user) {
         // Se o usuário for encontrado, cria a sessão e redireciona para o menu
         sessionStorage.setItem('usuario', user.nome);  // Armazena na sessão local do navegador (sessionStorage)
