@@ -1,3 +1,5 @@
+API_USER="http://127.0.0.1:5501/HTML/index.html"
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from db import get_connection
@@ -20,8 +22,8 @@ def create_user():
     cursor = conn.cursor()
 
     # Vai usar o json cuja key são os IDs
-    cursor.execute("INSERT INTO users (name, email, age) VALUES (%s, %s, %s)", 
-                   (data['name'], data['email'], data['age']))
+    cursor.execute("INSERT INTO users (nome, senha) VALUES (%s, %s)", 
+                   (data['nome'], data['senha']))
     conn.commit()
     return jsonify({"message": "User created successfully"}), 201
 
@@ -43,8 +45,8 @@ def update_user(id):
     data = request.json
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("UPDATE users SET name=%s, email=%s, age=%s WHERE id=%s", 
-                   (data['name'], data['email'], data['age'], id))
+    cursor.execute("UPDATE users SET nome=%s, senha=%s, WHERE id=%s", 
+                   (data['nome'], data['senha'], id))
     conn.commit()
     return jsonify({"message": "User updated successfully"}), 200
 
