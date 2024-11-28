@@ -75,17 +75,17 @@
   </div>
 
   <!-- Tela de cadastro -->
-  <div class="form-box register">
+  <form id="formCadastro" class="form-box register"> 
     <div class="form">
       <div>
         <img src="../assets/FazerCadastro.png" width="200px" alt="">
         <img src="../assets/UserTelaLogin.png" alt="">
       </div>
       <div class="input-box">
-        <input type="text" placeholder="Nome" required>
+        <input id="nome" type="text" placeholder="Nome" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Senha" required>
+        <input id="senha" type="password" placeholder="Senha" required>
       </div>
 
       <button type="submit" class="btn">Cadastrar</button>
@@ -94,7 +94,7 @@
         <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 
 <!-- Card principal -->
@@ -174,10 +174,9 @@
   </div>
 </footer>
 
-<script src="/JS/usuarioCadastro.js"></script>
-
 <script src="../JS/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="/JS/login.js"></script>
+<script src="/JS/usuarioCadastro.js"></script>
 </body>
 </html>

@@ -59,18 +59,6 @@ def delete_user(id):
     conn.commit()
     return jsonify({"message": "User deleted successfully"}), 200
 
-@app.route("/usuario", methods=["POST"])
-def add_produto():
-    data = request.json
-    conn = get_connection()
-    cursor = conn.cursor()
-    cursor.execute("""
-    INSERT INTO usuario(nome,senha)
-    VALUES(%s,%s)
-    """, (data["nome"], data["senha"]))
-    conn.commit()
-    return jsonify({"message": "Product created successfully"}), 201
-
 if __name__ == '__main__':
     app.run(debug=True)
 
