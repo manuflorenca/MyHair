@@ -34,11 +34,17 @@
         <b>Daniele Todão</b>
       </a>
     </td>
-    <tr>
+  <tr>
     <td colspan='5'>
       <p>Back-End</p>
     </td>
   </tr>
+    <td align="center">
+      <a href="https://github.com/manuflorenca" title="GitHub da Manuela Florença">
+        <img src="https://avatars.githubusercontent.com/u/160082556?v=4" width="100px;" alt="Foto da Manuela Florença no GitHub"/><br>
+        <b>Manuela Florença</b>
+      </a>
+    </td>
   </tr>
     </td>
   </tr>
