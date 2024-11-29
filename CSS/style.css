@@ -1,7 +1,8 @@
 *{
-    font-family: "Manjari", sans-serif;
-    font-weight: 100;
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
     font-style: normal;
+
 }
 
 body {
@@ -26,6 +27,12 @@ nav button{
     text-align: inherit;
     cursor: pointer;
     outline: none;
+}
+
+#btnClose {
+    background-color: transparent;
+    color: #F2EADF;
+    border: none;
 }
 
 hr {
@@ -180,6 +187,7 @@ a {
     }
     .img-mobile {
         display: block;
+        border-radius: 10px;
     }
 }
 
@@ -303,6 +311,7 @@ h2{
 
 .cardScrol a img {
     width: 100%;
+    border-radius: 10px;
 
 }
 
