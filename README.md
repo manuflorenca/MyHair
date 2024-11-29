@@ -45,6 +45,24 @@
         <b>Manuela Florença</b>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/OJoaoMatos" title="GitHub do João Matos">
+        <img src="https://avatars.githubusercontent.com/u/174015355?v=4" width="100px;" alt="Foto do João Matos no GitHub"/><br>
+        <b>João Matos</b>
+      </a>
+    </td>
+        <td align="center">
+      <a href="https://github.com/Oescobarm" title="GitHub do Mateus Escobar">
+        <img src="https://avatars.githubusercontent.com/u/174015474?v=4" width="100px;" alt="Foto do Mateus Escobar no GitHub"/><br>
+        <b>Mateus Escobar</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Danisouza2" title="GitHub da Daniele Todão">
+        <img src="https://avatars.githubusercontent.com/u/168936904?v=4" width="100px;" alt="Foto da Daniele Todão no GitHub"/><br>
+        <b>Daniele Todão</b>
+      </a>
+    </td>
   </tr>
     </td>
   </tr>
@@ -78,14 +96,6 @@ Paleta de Cores: Tons suaves de rosa, nude e marrom, que remetem ao conforto e s
 Tipografia Elegante: Fontes modernas e suaves para facilitar a leitura e criar um visual agradável.
 Imagens Inspiradoras: Fotografias de alta qualidade de cortes de cabelo, penteados e produtos de beleza.
 
-##  🛠️ Tecnologias Utilizadas
-Para construir uma experiência sólida e atraente, utilizamos:
-
-## HTML5 e CSS3: Estrutura e estilo responsivo, adaptável a qualquer dispositivo.
-## JavaScript: Interatividade e animações leves para uma navegação fluida.
-## Bootstrap: Componentes estilizados que garantem uma interface moderna e elegante.
-## MySQL: Para funcionalidades de backend como agendamento e armazenamento de dados.
-
-## Agradecemos por fazer parte dessa jornada de beleza e bem-estar com o My Hair. Seu cabelo merece o melhor! 💇‍♀️💖
+Agradecemos por fazer parte dessa jornada de beleza e bem-estar com o My Hair. Seu cabelo merece o melhor! 💇‍♀️💖
 
 
