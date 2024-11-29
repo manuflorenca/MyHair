@@ -93,6 +93,49 @@
     </div>
   </div>
 
+
+  <h1 class="text-center my-5 fs-1">Cadastrar a cabeleireira</h1>
+
+  <!-- Formulário para adicionar usuário -->
+  <form id="userForm" class="d-flex flex-column bd-highlight mb-4 p-5">
+      <input class="my-2" type="text" id="name" placeholder="Nome" required>
+      <input class="my-2" type="email" id="email" placeholder="Email" required>
+      <input class="my-2" type="number" id="age" placeholder="Idade" required>
+      <button class="my-2" type="submit">Cadastrar</button>
+  </form>
+
+  <!-- Formulário para atualizar usuário -->
+  <form id="updateForm" style="display: none;">
+      <input type="hidden" id="updateId">
+      <input type="text" id="updateName" placeholder="Nome" required>
+      <input type="email" id="updateEmail" placeholder="Email" required>
+      <input type="number" id="updateAge" placeholder="Idade" required>
+      <button type="submit">Update User</button>
+  </form>
+
+  <!-- Tabela de usuários -->
+
+  <h1 class="text-center fs-1 my-4"><i class="bi bi-person-gear"> Profissionais</i></h1>
+
+  <h2 class="my-4"><i class="bi bi-caret-right-fill">Lista de  Profissionais</i></h2>
+
+
+  <table class="container mb-4 p-5">
+    <thead >
+      <tr class="d-flex justify-content-between ">
+        <th class="col-sm-6 col-4" >Nome</th>
+        <th class="d-none d-sm-block col-4" >Email</th>
+        <th class="d-none d-sm-block col-2" >Idade</th>
+        <th class="col-sm-6 col-2 my-2" >Ações</th>
+      </tr>      
+    </thead>
+    <tbody id="userTable" class="">
+
+    </tbody>
+  </table>
+  
+  <h2 class="my-4"><i class="bi bi-caret-right-fill">Funções dos  Profissionais</i></h2>  
+
   <!-- Formulario de cadastro de profissional -->
 
     <form class="d-inline-flex p-2 bd-highlight bd-highlight mt-4 mb-3">
@@ -128,40 +171,7 @@
     </div>
   </form>
 
-  <!-- Tabela -->
-
-  <h2 class="text-center fs-1 my-4"><i class="bi bi-person-gear"> Profissionais</i></h2>
-  <table class="table p-2 mt-4 mb-3">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <script src="../JS/script.js"></script>
+  <script src="/JS/cadastrarCabeleleira.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
 </body>

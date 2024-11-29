@@ -5,6 +5,7 @@
 
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -356,6 +357,44 @@ h2{
 
 }
 
+/* Cadastrar cabeleleira formulario */
+
+#userForm{
+
+    border-radius: 5px;
+    background: rgba(191, 179, 164, 0.50);
+    margin: 20px;
+}
+
+#userForm input {
+    border-radius: 5px;
+    background: rgba(140, 86, 39, 0.50);
+    border: none;
+}
+
+#userForm button {
+
+    border-radius: 5px;
+    background:#401708;
+    color: #F2F2F2;
+    border: none;
+    
+
+}
+
+#userTable {
+    border-radius: 5px;
+    background: rgba(191, 179, 164, 0.50);
+    border: none;
+}
+
+#userTable button {
+
+    background: #401708;
+    border: none;
+    border-radius: 5px;
+    color: #F2EADF;
+}
 
 
 
