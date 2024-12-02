@@ -37,6 +37,7 @@ def get_users():
 
     # Ele vai buscar todos como fetchall
     users = cursor.fetchall()
+    print(users)
     return jsonify(users), 200
 
 # Atualizar usuário

@@ -10,9 +10,7 @@ const userForm=document.querySelector("#formLogin");
     const response = await fetch(API_URL);
     // Trás os dados via API
     const users = await response.json();
-    console.log(users)
     const user = users.find(user => user.Nome === nome.value && user.Senha === senha.value);
- 
     if (user) {
         // Se o usuário for encontrado, cria a sessão e redireciona para o menu
         sessionStorage.setItem('usuario', user.Nome);  // Armazena na sessão local do navegador (sessionStorage)
