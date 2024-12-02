@@ -43,50 +43,60 @@
     </a>
   </header>
 
-    <!-- Tela de login --> 
-    <div class="wrapper">
-        <span class="icon-close">
-          <i class="bi bi-x"></i>
-        </span>
-        <div class="form-box login">
-          <div id="formLogin">
-            <div>
-              <img src="../assets/FazerLogin.png" alt="">
-              <img src="../assets/UserTelaLogin.png" alt="">
-            </div>
-            <div class="input-box">
-              <input id="nome" type="name" placeholder="Nome">
-            </div>
-            <div class="input-box">
-              <input id="senha" type="password" placeholder="Senha">
-            </div>
-            <button type="submit" class="btn">Entrar</button>
-            <div class="login-register">
-              <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
-            </div>
-          </div>
-        </div>
-        <!-- Tela de cadastro -->
-        <div class="form-box register">
-          <div class="form">
-            <div>
-              <img src="../assets/FazerCadastro.png" width="200px" alt="">
-              <img src="../assets/UserTelaLogin.png" alt="">
-            </div>
-            <div class="input-box">
-              <input type="name" placeholder="Nome">
-            </div>
-            <div class="input-box">
-              <input type="password" placeholder="Senha">
-            </div>
-            <button type="submit" class="btn">Cadastrar</button>
-            <div class="login-register">
-              <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
-            </div>
-          </div>
-          <div id="error-message" style="color: red;"></div> <!-- Adiciona um espaço para a mensagem de erro -->
-        </div>
+ <!-- Tela de login --> 
+<div class="wrapper">
+  <span class="icon-close">
+    <i class="bi bi-x-lg"></i>
+  </span>
+  <div class="form-box login">
+    <form id="formLogin"> <!-- Adicionei a tag <form> aqui -->
+      <div>
+        <img src="../assets/FazerLogin.png" alt="">
+        <img src="../assets/UserTelaLogin.png" alt="">
+      </div>
+      <div class="input-box">
+        <input id="nome" type="text" placeholder="Nome" required>
+      </div>
+      <div class="input-box">
+        <input id="senha" type="password" placeholder="Senha" required>
+      </div>
+      <select class="form-select form-select-lg mb-2 fs-6 my-2" aria-label="Small select example">
+        <option selected>Você é cliente ou profissional?</option>
+        <option value="1">Cliente</option>
+        <option value="2">Profissional</option>
+      </select>
+
+      <button id="loginBtn" type="submit" class="btn">Entrar</button>
+     
+      <div class="login-register">
+        <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
+      </div>
+      <div id="error-message" style="color: red;"></div> 
+    </form>
+  </div>
+
+  <!-- Tela de cadastro -->
+  <form id="formCadastro" class="form-box register"> 
+    <div class="form">
+      <div>
+        <img src="../assets/FazerCadastro.png" width="200px" alt="">
+        <img src="../assets/UserTelaLogin.png" alt="">
+      </div>
+      <div class="input-box">
+        <input id="nome_cadastrar" type="text" placeholder="Nome" required>
+      </div>
+      <div class="input-box">
+        <input id="senha_cadastrar" type="password" placeholder="Senha" required>
+      </div>
+
+      <button type="submit" class="btn">Cadastrar</button>
+
+      <div class="login-register">
+        <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
+      </div>
     </div>
+  </form>
+</div>
 
     <!-- Seleção de profissionais -->
 
@@ -101,36 +111,41 @@
         <h2>Cabeleireiras</h2>
     </div>
 
-    <div class="scroll-container">
-
-        <div class="card card-transparente" style="width: 13rem;">
-            <div class="card-body">
-              <img src="../assets/QuadradoTeste.png" alt="">
-              <h5 class="card-title">Dona Cleide</h5>
+    <div class="d-flex scroll-container ">
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <a href=""><img src="../assets/donaCleide.png" alt=""></a>
+          </div>
+          <h5 class="card-title text-center">Dona Cleide</h5>
+        </div>
+      </div>
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <a href=""><img src="../assets/donaJuju.png" alt=""></a>
+          </div>
+          <h5 class="card-title text-center">Dona Juju</h5>
+        </div>
+      </div>
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <div class="cardScrol">
+              <a href=""><img src="../assets/donaMaria.png" alt=""></a>
             </div>
-        </div>
-      
-        <div class="card card-transparente" style="width: 13rem;">
-          <div class="card-body">
-            <img src="../assets/QuadradoTeste.png" alt="">
-            <h5 class="card-title">Dona Juju</h5>
           </div>
+          <h5 class="card-title text-center">Dona Maria</h5>
         </div>
-      
-        <div class="card card-transparente" style="width: 13rem;">
-          <div class="card-body">
-            <img src="../assets/QuadradoTeste.png" alt="">
-            <h5 class="card-title">Dona Maria</h5>
+      </div>
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <a href=""><img src="../assets/donaLurdes.png" alt=""></a>
           </div>
+          <h5 class="card-title">Dona Lurdes</h5>
         </div>
-      
-        <div class="card card-transparente" style="width: 13rem;">
-          <div class="card-body">
-            <img src="../assets/QuadradoTeste.png" alt="">
-            <h5 class="card-title">Dona Lurdes</h5>
-          </div>
-        </div>
-      
+      </div>
     </div>
 
     <!-- Seleção de Manicures -->
@@ -139,66 +154,71 @@
         <h2>Manicures</h2>
     </div>
 
-    <div class="scroll-container">
-
-        <div class="card card-transparente" style="width: 13rem;">
-            <div class="card-body">
-              <img src="../assets/QuadradoTeste.png" alt="">
-              <h5 class="card-title">Ivone</h5>
+    <div class="d-flex scroll-container ">
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <a href=""><img src="../assets/ivone.png" alt=""></a>
+          </div>
+          <h5 class="card-title text-center">Ivone</h5>
+        </div>
+      </div>
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <a href=""><img src="../assets/julia.png" alt=""></a>
+          </div>
+          <h5 class="card-title text-center">Julia</h5>
+        </div>
+      </div>
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <div class="cardScrol">
+              <a href=""><img src="../assets/lais.png" alt=""></a>
             </div>
-        </div>
-      
-        <div class="card card-transparente" style="width: 13rem;">
-          <div class="card-body">
-            <img src="../assets/QuadradoTeste.png" alt="">
-            <h5 class="card-title">Julia</h5>
           </div>
+          <h5 class="card-title text-center">Lais</h5>
         </div>
-      
-        <div class="card card-transparente" style="width: 13rem;">
-          <div class="card-body">
-            <img src="../assets/QuadradoTeste.png" alt="">
-            <h5 class="card-title">Lais</h5>
+      </div>
+      <div class="card card-transparente">
+        <div class="card-body">
+          <div class="cardScrol">
+            <a href=""><img src="../assets/daniela.png" alt=""></a>
           </div>
+          <h5 class="card-title">Daniela</h5>
         </div>
-      
-        <div class="card card-transparente" style="width: 13rem;">
-          <div class="card-body">
-            <img src="../assets/QuadradoTeste.png" alt="">
-            <h5 class="card-title">Danielle</h5>
-          </div>
-        </div>
-      
+      </div>
     </div>
-      
-    <!-- Footer -->
-    <footer class="text-center text-lg-start">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!"><i class="bi bi-geo-alt-fill"> Localização</i></a>
-                </li>
-                <li>
-                  <a href="#!" ><i class="bi bi-whatsapp"> Whatsapp</i></a>
-                </li>
-              </ul>
-            </div>
+  
+<!-- Footer -->
+<footer class=" d-flex text-center">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-lg-6 ">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!"><i class="bi bi-geo-alt-fill"> Localização</i></a>
+          </li>
+          <li>
+            <a href="#!"><i class="bi bi-whatsapp"> Whatsapp</i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!"><i class="bi bi-instagram"> Instagram</i></a>
+          </li>
+          <li>
+            <a href="#!"><i class="bi bi-facebook"> Facebook</i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-      
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!"><i class="bi bi-instagram"> Instagram</i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="bi bi-facebook"> Facebook</i></a>
-                </li>
-              </ul>
-            </div>
-        </div>
-    </footer>
     <script src="../JS/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     

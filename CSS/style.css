@@ -400,6 +400,17 @@ h2{
     color: #F2EADF;
 }
 
+/* cortes */
 
+.card {
 
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
 
+}
+
+.card-img-top {
+    
+    border-radius: 10px;
+}
