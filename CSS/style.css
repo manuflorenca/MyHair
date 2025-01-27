@@ -259,7 +259,9 @@ a {
 /* Parte das cabeleireiras */
 
 h1 {
-    color: #260E05;
+    color: #401708;
+    font-weight: 600;   /* Semibold */
+    font-style: italic; /* Itálico */
 }
 
 h2{
