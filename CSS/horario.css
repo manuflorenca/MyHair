@@ -303,4 +303,245 @@
     }
   }
 
-  
+/* Header */
+
+#navbar {
+  background-color: #401708;
+}
+
+
+nav button{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+#btnClose {
+  background-color: transparent;
+  color: #F2EADF;
+  border: none;
+}
+
+hr {
+  color: #401708;
+}
+
+.card-transparente {
+  background-color: transparent;
+  border: none;
+}
+
+.scroll-container {
+  display: flex; 
+  overflow-x: auto; 
+  padding: 10px;
+  gap: 10px; 
+  white-space: nowrap; 
+}
+
+.scroll-container .card,
+.scroll-container img {
+  display: inline-block; 
+  flex-shrink: 0; 
+}
+
+
+footer{
+  background-color: #401708;
+  color: #F2F2F2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tela de login */
+
+.wrapper {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  height: 440px;
+  background-color: #F2EADF;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+  z-index: 100; 
+}
+
+.wrapper.active-popup {
+  display: flex; 
+  transform: scale(1);
+}
+
+.wrapper .form-box.login {
+  transition: transform .18s ease;
+  transform: translateX(0);
+  position: absolute;
+}
+.wrapper.active .form-box.login {
+  transform: translateX(-400px);
+}
+
+.wrapper input {
+  width: 300px;
+  height: 40px;
+  background: #F2EADF;
+  border-radius: 5px;
+  border: 3px solid #401708;
+  background: rgba(242, 234, 223, 0.00);
+  margin-bottom: 10px;
+  color: #401708;
+}
+
+.wrapper button {
+  width: 300px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #401708;
+  color: #F2EADF;
+}
+
+.wrapper button:hover{
+  background-color:#260E05 ;
+  color: #F2EADF;
+}
+
+.wrapper p{
+  color: #401708;
+}
+
+/* Tela de cadastro */
+.wrapper .form-box.register {
+  position: absolute;
+  transition: transform .18s ease;
+  transform: translateX(400px); 
+}
+
+.wrapper.active .form-box.register {
+  transform: translateX(0); 
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #401708;
+  font-size: 2em;
+  color: #F2EADF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form-select {
+  background-color: #401708;
+  color: #F2EADF;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+
+
+}
+
+/* Trocar elementos */
+
+.img-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .img-desktop {
+      display: none;
+  }
+  .img-mobile {
+      display: block;
+      border-radius: 10px;
+  }
+}
+
+/* Estilização da Header */
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color:transparent;
+  position: relative;
+}
+
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2; 
+}
+
+.offcanvas{
+  background-color: #260E05;
+}
+
+.offcanvas-header {
+  color: #F2F2F2;
+}
+
+.offcanvas-body{
+  background-color: #F2EADF;
+}
+
+.offcanvas-body ul {
+  list-style: none;
+  font-size: larger;
+  color: #260E05;
+}
+
+.offcanvas-body ul li:hover {
+  color: #8C5627;
+}
+
+#btnPopup {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+      padding: 0 10px;
+  }
+
+  .navbar ul li a {
+      padding: 10px;
+  }
+}

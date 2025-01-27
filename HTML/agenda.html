@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+<header class="header" id="navbar">
+  <div class="menu-container">
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <button type="button" id="btnClose" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul>
+          <li class="fs-4"><a href="/HTML/index.html">Home</a></li>
+          <li class="fs-4"><a href="/HTML/agenda.html">Agenda</a></li>
+          <li class="fs-4"><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
+          <li class="fs-4"><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
+          <li class="fs-4"><a href="/HTML/cadastrarCabeleleira.html">Cadastro de cabeleleiras</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão de Popup (à direita) -->
+  <a href="#">
+      <button id="btnPopup">
+        <i class="bi bi-person-fill fs-1 text-light"></i>
+      </button>
+  </a>
+</header<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -14,51 +40,90 @@
 </head>
 <body>
 
-
-    <div class="containerTitulo row-md-6">
-        <img src="../assets/escolhaOhorario.png" alt="">
-    </div>
-
-    <div class="contianer col-md-6">
-        <div class="calendar">
-          <div class="calendar-header">
-            <span class="month-picker" id="month-picker"> May </span>
-            <div class="year-picker" id="year-picker">
-              <span class="year-change" id="pre-year">
-                <pre></pre>
-              </span>
-              <span id="year">2020 </span>
-              <span class="year-change" id="next-year">
-                <pre>></pre>
-              </span>
-            </div>
-          </div>
-    
-          <div class="calendar-body">
-            <div class="calendar-week-days">
-              <div>Sun</div>
-              <div>Mon</div>
-              <div>Tue</div>
-              <div>Wed</div>
-              <div>Thu</div>
-              <div>Fri</div>
-              <div>Sat</div>
-            </div>
-            <div class="calendar-days">
-            </div>
-          </div>
-          <div class="calendar-footer">
-          </div>
-          <!-- <div class="date-time-formate">
-            <div class="day-text-formate">TODAY</div>
-            <div class="date-time-value">
-              <div class="time-formate">01:41:20</div>
-              <div class="date-formate">03 - march - 2022</div>
-            </div>
-          </div> -->
-          <div class="month-list"></div>
+  <header class="header" id="navbar">
+    <div class="menu-container">
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+  
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <button type="button" id="btnClose" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul>
+            <li class="fs-4"><a href="/HTML/index.html">Home</a></li>
+            <li class="fs-4"><a href="/HTML/agenda.html">Agenda</a></li>
+            <li class="fs-4"><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
+            <li class="fs-4"><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
+            <li class="fs-4"><a href="/HTML/cadastrarCabeleleira.html">Cadastro de cabeleleiras</a></li>
+          </ul>
         </div>
       </div>
+    </div>
+  
+    <!-- Botão de Popup (à direita) -->
+    <a href="#">
+        <button id="btnPopup">
+          <i class="bi bi-person-fill fs-1 text-light"></i>
+        </button>
+    </a>
+  </header>
+
+  <div class="containerTitulo row-md-6">
+      <img src="/assets/relogio.svg" alt="">
+      <h1>Marque seu horario</h1>      
+      <h1>Agenda</h1>
+
+      <img src="/assets/cabeleireira.svg" alt="">
+
+    <div class="agenda-container">
+      <div class="contianer col-md-6">
+          <div class="calendar">
+            <div class="calendar-header">
+              <span class="month-picker" id="month-picker"> May </span>
+              <div class="year-picker" id="year-picker">
+                <span class="year-change" id="pre-year">
+                  <pre></pre>
+                </span>
+                <span id="year">2020 </span>
+                <span class="year-change" id="next-year">
+                  <pre>></pre>
+                </span>
+              </div>
+            </div>
+      
+            <div class="calendar-body">
+              <div class="calendar-week-days">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+              <div class="calendar-days">
+              </div>
+            </div>
+            <div class="calendar-footer">
+            </div>
+            <!-- <div class="date-time-formate">
+              <div class="day-text-formate">TODAY</div>
+              <div class="date-time-value">
+                <div class="time-formate">01:41:20</div>
+                <div class="date-formate">03 - march - 2022</div>
+              </div>
+            </div> -->
+            <div class="month-list"></div>
+          </div>
+        </div>
+        <div class="agenda-container">
+          <div class="hora-container">
+              <label for="hora">Escolha a hora:</label>
+              <input type="time" id="hora" name="hora">
+          </div>
+      </div>
+    </div>
+    </div>
     <script src="../JS/scriptAgenda.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
@@ -71,6 +136,7 @@
           window.location.href = "index.html";
          
       }
+
     </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+*{
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #F2F2F2 ;
+    width: 100vw;
+    height: 100vh;
+}
+
+.agenda-container {
+    width: 337px;
+    height: 416px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #401708;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+
