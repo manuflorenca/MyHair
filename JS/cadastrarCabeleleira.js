@@ -120,5 +120,13 @@ userForm.addEventListener("submit", async (e)=>{
 //     updateForm.style.display = 'none';
 // });
 
+// Botão de Hide
+
+document.getElementById('btn_addCompetencia').addEventListener('click', function() {
+    const container = document.getElementById('competencia-container');
+    container.classList.toggle('hide');
+});
+
+
 // Initial fetch
 // fetchUsers();
