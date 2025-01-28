@@ -563,3 +563,12 @@ a {
 
 }
 
+.btnFinal{
+  width: 214px;
+  height: 30px;
+  border-radius: 7px;
+  background: #401708;
+  color: #F2EADF;
+  border: none;
+
+}
