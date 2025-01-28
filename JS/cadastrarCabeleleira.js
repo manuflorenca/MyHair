@@ -10,8 +10,8 @@ userForm.addEventListener("submit", async (e)=>{
     e.preventDefault();
  
     const usuario={
-        nome:document.querySelector("#nome_cadastrar").value,
-        senha:document.querySelector("#senha_cadastrar").value
+        nome:document.querySelector("#nome").value,
+        senha:document.querySelector("#senha").value
     }
  
     try{
@@ -19,6 +19,32 @@ userForm.addEventListener("submit", async (e)=>{
             method:"POST",
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify(usuario)
+        })
+
+        formCadastro.reset();
+ 
+    }catch(erro){
+        alert("Não foi possivel cadastrar")
+    }
+
+
+    //  Vai ter que pegar o nome do usuario que acabou de cadastrar e retornar o ID e a senha
+
+
+    const profissional={
+        id:"", // aqui vem o id do novo usuario cadastrado
+        senha:"",// aqui vem a senha do novo usuario cadastrado
+        adm:document.querySelector("#adm").value,
+        email:document.querySelector("#email").value,
+        telefone:document.querySelector("#telefone").value,
+    }
+
+
+    try{
+        await fetch(API_URL, {
+            method:"POST",
+            headers:{ 'Content-Type': 'application/json' },
+            body:JSON.stringify(profissional)
         })
 
         formCadastro.reset();
