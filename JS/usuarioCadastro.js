@@ -8,9 +8,8 @@ formCadastro.addEventListener("submit", async (e)=>{
     e.preventDefault();
  
     const usuario={
-        nome:document.querySelector("#nome").value,
-        senha:document.querySelector("#senha").value
- 
+        nome:document.querySelector("#nome_cadastrar").value,
+        senha:document.querySelector("#senha_cadastrar").value
     }
  
     try{
