@@ -545,3 +545,21 @@ a {
       padding: 10px;
   }
 }
+
+.header {
+  position: fixed; /* Mantém o header fixo */
+  top: 0; /* Posiciona no topo */
+  left: 0; /* Posiciona à esquerda */
+  width: 100%; /* Ajusta a largura para cobrir toda a página */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.date-time {
+  background-color: #8C5627;
+  color: #FFFFFF; 
+  border: 1px solid #401708; 
+  padding: 5px;
+  border-radius: 5px; 
+
+}
+
