@@ -22,10 +22,14 @@ def create_user():
     cursor = conn.cursor()
 
     # Vai usar o json cuja key são os IDs
-    cursor.execute("INSERT INTO users (nome, senha) VALUES (%s, %s)", 
+    cursor.execute("INSERT INTO usuario (nome, senha) VALUES (%s, %s)", 
                    (data['nome'], data['senha']))
     conn.commit()
     return jsonify({"message": "User created successfully"}), 201
+
+
+
+
 
 # Listar usuários
 @app.route('/usuario', methods=['GET'])
@@ -59,6 +63,13 @@ def delete_user(id):
     cursor.execute("DELETE FROM usuario WHERE id=%s", (id,))
     conn.commit()
     return jsonify({"message": "User deleted successfully"}), 200
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
