@@ -121,38 +121,40 @@
 
   <!-- Tabela de usuários -->
 
-  <h1 class="text-center fs-1 my-4"><i class="bi bi-person-gear"> Profissionais</i></h1>
+  <h1 class="text-center fs-1 my-4 fw-bold"> Profissionais</h1>
 
-  <h2 class="my-4"><i class="bi bi-caret-right-fill">Lista de  Profissionais</i></h2>
+  <h2 class="my-4 text-center my-5 fs-2">Lista de  Profissionais</h2>
 
 
-  <table class="container mb-4 p-5">
+  <table class="userTable container mb-4 p-5">
     <thead>
-      <tr class="d-flex justify-content-between">
-        <th class="col-sm-6 col-4">Nome</th>
-        <th class="d-none d-sm-block col-4">Email</th>
-        <th class="col-sm-6 col-2 my-2">Ações</th>
-      </tr>
+        <tr>
+            <th class="col-4">Nome</th>
+            <th class="d-none d-sm-table-cell col-4">Email</th>
+            <th class="col-4">Ações</th>
+        </tr>
     </thead>
     <tbody id="userTable">
-
-      <!-- Exemplo de linha de dados -->
-      <tr>
-        <td></td>
-        <td class="d-none d-sm-block"></td>
-        <td>
-          <button class="">Editar</button>
-          <button class="">Excluir</button>
-          <button id="btn_addCompetencia" class="">Adicionar Competencia</button>
-        </td>
-      </tr>
+        <!-- Exemplo de linha de dados -->
+        <tr>
+            <td class="col-4 p-3">Nome Exemplo</td>
+            <td class="d-none d-sm-table-cell col-4">email@exemplo.com</td>
+            <td class="col-4">
+                <div class="d-flex justify-content-start">
+                    <button class="btn btn-primary mr-2">Editar</button>
+                    <button class="btn btn-danger mr-2">Excluir</button>
+                    <button id="btn_addCompetencia" class="">Adicionar Competência</button>
+                </div>
+            </td>
+        </tr>
     </tbody>
-  </table>
+</table>
+
   
   <!-- Formulario de cadastro de profissional -->
   
   <div id="competencia-container" class="hide">
-    <h2 class="my-4"><i class="bi bi-caret-right-fill">Funções dos  Profissionais</i></h2> 
+    <h2 class="my-4 text-center fs-1 my-5">Funções dos  Profissionais</h2> 
       <form class="d-inline-flex p-2 bd-highlight bd-highlight mt-4 mb-3">
           <div class="form-group d-inline-flex p-2 bd-highlight ">
           <label for="exampleFormControlFile1"><i class="bi bi-camera-fill fs-4"> Foto do(a) profissional:</i></label>

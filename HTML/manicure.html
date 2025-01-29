@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Corte Feminino</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../assets/logo (2).png" type="image/x-icon">
@@ -13,34 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Nav --> 
-<header class="header" id="navbar">
-  <div class="menu-container">
-    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
-
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div class="offcanvas-header">
-        <button type="button" id="btnClose" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul>
-          <li class="fs-4"><a href="/HTML/index.html">Home</a></li>
-          <li class="fs-4"><a href="/HTML/agenda.html">Agenda</a></li>
-          <li class="fs-4"><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
-          <li class="fs-4"><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
-          <li class="fs-4"><a href="/HTML/cadastrarCabeleleira.html">Cadastro de cabeleleiras</a></li>
-        </ul>
+  
+  <header class="header" id="navbar">
+    <div class="menu-container">
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+  
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <button type="button" id="btnClose" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul>
+            <li class="fs-4"><a href="/HTML/index.html">Home</a></li>
+            <li class="fs-4"><a href="/HTML/agenda.html">Agenda</a></li>
+            <li class="fs-4"><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
+            <li class="fs-4"><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
+            <li class="fs-4"><a href="/HTML/cadastrarCabeleleira.html">Cadastro de cabeleleiras</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Botão de Popup (à direita) -->
-  <a href="#">
-      <button id="btnPopup">
-        <i class="bi bi-person-fill fs-1 text-light"></i>
-      </button>
-  </a>
-</header>
+  
+  
+    <!-- Botão de Popup (à direita) -->
+    <a href="#">
+        <button id="btnPopup">
+          <i class="bi bi-person-fill fs-1 text-light"></i>
+        </button>
+    </a>
+  </header>
 
 <!-- Tela de login --> 
 <div class="wrapper">
@@ -59,7 +60,11 @@
       <div class="input-box">
         <input id="senha" type="password" placeholder="Senha" required>
       </div>
-
+      <select class="form-select form-select-lg mb-2 fs-6 my-2" aria-label="Small select example">
+        <option selected>Você é cliente ou profissional?</option>
+        <option value="1">Cliente</option>
+        <option value="2">Profissional</option>
+      </select>
 
       <button id="loginBtn" type="submit" class="btn">Entrar</button>
      
@@ -90,66 +95,33 @@
         <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
       </div>
     </div>
-  </form>  <!-- Final do cadastro -->
+  </form>
 </div>
 
+<!-- Corte Maculino -->
 
-<!-- Card principal -->
-<div class="card card-transparente align-items-center my-5 ">
-  <div class="card-body">
-    <video class="img-desktop" src="../assets/propaganda.mp4" alt="Imagem Desktop"  autoplay loop muted></video>
-    <video class="img-mobile" src="/assets/primeiro corte.mp4" alt="Imagem Mobile" autoplay loop muted></video>
-
-  </div>
+<div class="d-flex justify-content-center align-items-center my-5">
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/manicure.jpg" class="card-img-top" alt="...">
+    </div>
 </div>
 
-<!-- Titulo-->
-<h1 class="text-center">Nossos Serviços</h1>
+<div class="d-flex justify-content-center my-2" >
+    <h1 class="fs-1">Manicure</h1>
+</div>
 
-<!-- Card scroll -->
-<div class="d-flex scroll-container ">
-  <div class="card card-transparente">
-    <div class="card-body">
-      <div class="cardScrol">
-        <a href="/HTML/corteFeminino.html"><img src="../assets/imgIndexCabelo.png" alt=""></a>
-      </div>
-      <h5 class="card-title text-center">Corte Feminino</h5>
-    </div>
-  </div>
-  <div class="card card-transparente">
-    <div class="card-body">
-      <div class="cardScrol">
-        <a href="/HTML/corteMasculino.html"><img src="../assets/corteMasculino.png" alt=""></a>
-      </div>
-      <h5 class="card-title text-center">Corte Masculino</h5>
-    </div>
-  </div>
-  <div class="card card-transparente">
-    <div class="card-body">
-      <div class="cardScrol">
-        <div class="cardScrol">
-          <a href="/HTML/escova.html"><img src="../assets/escova.png" alt=""></a>
-        </div>
-      </div>
-      <h5 class="card-title text-center">Escova</h5>
-    </div>
-  </div>
-  <div class="card card-transparente">
-    <div class="card-body">
-      <div class="cardScrol">
-        <a href="/HTML/tintura.html"><img src="../assets/tintura.png" alt=""></a>
-      </div>
-      <h5 class="card-title text-center">Tintura</h5>
-    </div>
-  </div>
-  <div class="card card-transparente">
-    <div class="card-body">
-      <div class="cardScrol">
-        <a href="/HTML/manicure.html"><img src="../assets/manicure.jpg" alt=""></a>
-      </div>
-      <h5 class="card-title text-center">Manicure</h5>
-    </div>
-  </div>
+<div class="d-flex justify-content-center">
+    <p>Preço - R$ 70,00</p>
+</div>
+
+<div class="d-flex flex-column justify-content-center align-items-center my-4">
+    <h2 class="fs-4">Agende um horário</h2>
+    <button class="btnAgenda" type="submit"><i class="bi bi-clock-fill"></i></button>
+</div>
+
+<div class="d-grid gap-3 justify-content-center align-items-center my-4">
+    <button class="btnFinal" type="button">Adicionar mais serviços</button>
+    <button class="btnFinal mb-5" type="button">Ver agendamento completo</button>
 </div>
 
 <!-- Footer -->
@@ -182,7 +154,6 @@
 
 <script src="../JS/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="/JS/login.js"></script>
-<script src="/JS/usuarioCadastro.js"></script>
+    
 </body>
 </html>
