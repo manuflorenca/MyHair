@@ -64,14 +64,43 @@ def delete_user(id):
     conn.commit()
     return jsonify({"message": "User deleted successfully"}), 200
 
-
-
-
-
-
-
-
 if __name__ == '__main__':
     app.run(debug=True)
 
 
+
+
+@app.route('/profissional', methods=['POST'])
+def transformar_usuario_em_profissional():
+    data = request.get_json()
+    usuario_id = data['id']
+    adm = data['adm']
+    nome = data['nome']
+    senha = data['senha']
+    
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            # Verificar se o usuário existe
+            sql_usuario = "SELECT * FROM usuarios WHERE id = %s"
+            cursor.execute(sql_usuario, (usuario_id,))
+            usuario = cursor.fetchone()
+            
+            if not usuario:
+                return jsonify({'message': 'Usuário não encontrado!'}), 404
+            
+            # Inserir o usuário na tabela de profissionais
+            sql_profissional = "INSERT INTO profissionais (adm, nome, senha) VALUES (%s, %s, %s)"
+            cursor.execute(sql_profissional, (adm, nome, senha))
+            
+            # Remover o usuário da tabela de usuários
+            sql_remover = "DELETE FROM usuarios WHERE id = %s"
+            cursor.execute(sql_remover, (usuario_id,))
+            
+            connection.commit()
+            return jsonify({'message': 'Usuário transformado em profissional com sucesso!'}), 200
+    finally:
+        connection.close()
+
+if __name__ == '__main__':
+    app.run(debug=True)
