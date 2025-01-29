@@ -37,62 +37,64 @@
   <!-- Botão de Popup (à direita) -->
   <a href="#">
       <button id="btnPopup">
-        <i class="bi bi-person-fill fs-1 text-light"></i>
+        <i class="iconeUsuario bi bi-person-fill fs-1 text-light"></i>
+        <h3 class="nomeDoUsuario">Nome</h3>
       </button>
   </a>
 </header>
 
 <!-- Tela de login --> 
 <div class="wrapper">
-  <span class="icon-close">
-    <i class="bi bi-x-lg"></i>
+  <span class="icon-close" style="cursor:pointer;">
+      <i class="bi bi-x-lg"></i>
   </span>
+  
+  <div id="userGreeting" style="display:none; margin-bottom: 20px;"></div> <!-- Espaço para exibir o nome do usuário -->
+
   <div class="form-box login">
-    <form id="formLogin"> <!-- Adicionei a tag <form> aqui -->
-      <div>
-        <img src="../assets/FazerLogin.png" alt="">
-        <img src="../assets/UserTelaLogin.png" alt="">
-      </div>
-      <div class="input-box">
-        <input id="nome" type="text" placeholder="Nome" required>
-      </div>
-      <div class="input-box">
-        <input id="senha" type="password" placeholder="Senha" required>
-      </div>
+      <form id="formLogin"> 
+          <div>
+              <img src="../assets/FazerLogin.png" alt="">
+              <img src="../assets/UserTelaLogin.png" alt="">
+          </div>
+          <div class="input-box">
+              <input id="nome" type="text" placeholder="Nome" required>
+          </div>
+          <div class="input-box">
+              <input id="senha" type="password" placeholder="Senha" required>
+          </div>
 
+          <button id="loginBtn" type="submit" class="btn btn-primary">Entrar</button>
 
-      <button id="loginBtn" type="submit" class="btn">Entrar</button>
-     
-      <div class="login-register">
-        <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
-      </div>
-      <div id="error-message" style="color: red;"></div> 
-    </form>
+          <div class="login-register">
+              <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
+          </div>
+          <div id="error-message" style="color: red;"></div> 
+      </form>
   </div>
 
   <!-- Tela de cadastro -->
   <form id="formCadastro" class="form-box register"> 
-    <div class="form">
-      <div>
-        <img src="../assets/FazerCadastro.png" width="200px" alt="">
-        <img src="../assets/UserTelaLogin.png" alt="">
-      </div>
-      <div class="input-box">
-        <input id="nome_cadastrar" type="text" placeholder="Nome" required>
-      </div>
-      <div class="input-box">
-        <input id="senha_cadastrar" type="password" placeholder="Senha" required>
-      </div>
+      <div class="form">
+          <div>
+              <img src="../assets/FazerCadastro.png" width="200px" alt="">
+              <img src="../assets/UserTelaLogin.png" alt="">
+          </div>
+          <div class="input-box">
+              <input id="nome_cadastrar" type="text" placeholder="Nome" required>
+          </div>
+          <div class="input-box">
+              <input id="senha_cadastrar" type="password" placeholder="Senha" required>
+          </div>
 
-      <button type="submit" class="btn">Cadastrar</button>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
 
-      <div class="login-register">
-        <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
+          <div class="login-register">
+              <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
+          </div>
       </div>
-    </div>
   </form>  <!-- Final do cadastro -->
 </div>
-
 
 <!-- Card principal -->
 <div class="card card-transparente align-items-center my-5 ">

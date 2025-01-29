@@ -442,3 +442,8 @@ h2{
     display: none;
 }
 
+.nomeDoUsuario{
+    display: none;
+    color: #F2EADF;
+}
+
