@@ -11,6 +11,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .card-transparente {
+            background-color: transparent;
+            border: none;
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: hidden; /* Alterado para hidden */
+            padding: 10px;
+            gap: 10px;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .scroll-wrapper {
+            display: flex;
+            animation: scrollAnimation 20s linear infinite;
+        }
+
+        @keyframes scrollAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .scroll-container .card,
+        .scroll-container img {
+            display: inline-block;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,7 +69,6 @@
         </div>
       </div>
     </div>
-  
   
     <!-- Botão de Popup (à direita) -->
     <a href="#">
@@ -100,69 +135,14 @@
 
     <!-- Seleção de profissionais -->
 
-    <h1 class="text-center fs-1 my-4 fw-bold">Nossos profissionais</h1>
-
     <div class="container">
       <div class="row justify-content-between align-items-center text-center my-5">
-          <div class="col-md-8 d-flex align-items-center"> <!-- Coluna para a primeira imagem e texto -->
-              <img src="/assets/hairProm.png" alt="" class="img-fluid w-50 me-3"> <!-- Primeira imagem -->
-              <div>
-                  <h2>Venha fazer seu corte com a gente!</h2>
-                  <p>Venha descobrir o melhor em cuidados de beleza! Nossos cabeleireiros são especialistas prontos para transformar seu visual com cortes modernos e técnicas inovadoras.Os melhores cabeleireiros de São Paulo estão aqui para fazer você brilhar!</p>
-              </div>
-          </div>
-          <div class="col-md-4 d-flex justify-content-center"> <!-- Coluna para a segunda imagem -->
-              <img src="/assets/prom.png" alt="" class="img-fluid w-50"> <!-- Segunda imagem -->
-          </div>
-      </div>
-  </div>
-
-    <!-- Seleção de Cabeleireiras -->
-    <h2 class="text-start fs-3 my-4">Cabeleireiras</h2>
-    <div class="cabeleireira-container">
-      <div class="d-flex scroll-container ">
-        <div class="card card-transparente">
-          <div class="card-body">
-            <div class="cardScrol">
-              <a href=""><img src="../assets/donaCleide.png" alt=""></a>
-            </div>
-            <h5 class="card-title text-center">Dona Cleide</h5>
-          </div>
-        </div>
-        <div class="card card-transparente">
-          <div class="card-body">
-            <div class="cardScrol">
-              <a href=""><img src="../assets/donaJuju.png" alt=""></a>
-            </div>
-            <h5 class="card-title text-center">Dona Juju</h5>
-          </div>
-        </div>
-        <div class="card card-transparente">
-          <div class="card-body">
-            <div class="cardScrol">
-              <div class="cardScrol">
-                <a href=""><img src="../assets/donaMaria.png" alt=""></a>
-              </div>
-            </div>
-            <h5 class="card-title text-center">Dona Maria</h5>
-          </div>
-        </div>
-        <div class="card card-transparente">
-          <div class="card-body">
-            <div class="cardScrol">
-              <a href=""><img src="../assets/donaLurdes.png" alt=""></a>
-            </div>
-            <h5 class="card-title">Dona Lurdes</h5>
-          </div>
-        </div>
-        <div class="card card-transparente">
-          <div class="card-body">
-            <div class="cardScrol">
-              <div class="cardScrol">
-                <a href=""><img src="../assets/donaMaria.png" alt=""></a>
-              </div>
-            </div>
-            <h5 class="card-title text-center">Dona Maria</h5>
+        <div class="col-md-12 d-flex align-items-center">
+          <!-- Imagem que desaparece em telas sm -->
+          <img src="/assets/mulherNossosProfissionais.png" alt="Nossos profissionais" class="img-fluid w-25 me-3 animate-img d-none d-md-block">
+          <div class="prom animate-text">
+            <h2>Venha fazer seu corte com a gente!</h2>
+            <p>Venha descobrir o melhor em cuidados de beleza! Nossos cabeleireiros são especialistas prontos para transformar seu visual com cortes modernos e técnicas inovadoras. Os melhores cabeleireiros de São Paulo estão aqui para fazer você brilhar!</p>
           </div>
         </div>
       </div>
@@ -170,53 +150,208 @@
 
     <hr>
 
+    <!-- Seleção de Cabeleireiras -->
+    <h2 class="text-center fs-2 my-">Nossas cabeleireiras <i class="bi bi-scissors"></i></h2>
+    <div class="cabeleireira-container">
+      <div class="scroll-container">
+        <div class="scroll-wrapper">
+          <!-- Cards originais -->
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaCleide.png" alt="Dona Cleide"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Cleide</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaJuju.png" alt="Dona Juju"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Juju</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaMaria.png" alt="Dona Maria"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Maria</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaLurdes.png" alt="Dona Lurdes"></a>
+              </div>
+              <h5 class="card-title">Dona Lurdes</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaMaria.png" alt="Dona Maria"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Maria</h5>
+            </div>
+          </div>
+    
+          <!-- Cards duplicados -->
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaCleide.png" alt="Dona Cleide"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Cleide</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaJuju.png" alt="Dona Juju"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Juju</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaMaria.png" alt="Dona Maria"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Maria</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaLurdes.png" alt="Dona Lurdes"></a>
+              </div>
+              <h5 class="card-title">Dona Lurdes</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/donaMaria.png" alt="Dona Maria"></a>
+              </div>
+              <h5 class="card-title text-center">Dona Maria</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <hr class="my-4">
+
     <!-- Seleção de Manicures -->
 
-    <h2 class="text-start fs-3 my-4">Manicures</h2>
+    <h2 class="text-center fs-2 my-4">Nossas manicures <i class="bi bi-stars"></i></h2>
 
-    <div class="d-flex scroll-container ">
-      <div class="card card-transparente">
-        <div class="card-body">
-          <div class="cardScrol">
-            <a href=""><img src="../assets/ivone.png" alt=""></a>
-          </div>
-          <h5 class="card-title text-center">Ivone</h5>
-        </div>
-      </div>
-      <div class="card card-transparente">
-        <div class="card-body">
-          <div class="cardScrol">
-            <a href=""><img src="../assets/julia.png" alt=""></a>
-          </div>
-          <h5 class="card-title text-center">Julia</h5>
-        </div>
-      </div>
-      <div class="card card-transparente">
-        <div class="card-body">
-          <div class="cardScrol">
-            <div class="cardScrol">
-              <a href=""><img src="../assets/lais.png" alt=""></a>
+    <div class="cabeleireira-container p-5">
+      <div class="scroll-container">
+        <div class="scroll-wrapper">
+          <!-- Cards originais -->
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/ivone.png" alt="Ivone"></a>
+              </div>
+              <h5 class="card-title text-center">Ivone</h5>
             </div>
           </div>
-          <h5 class="card-title text-center">Lais</h5>
-        </div>
-      </div>
-      <div class="card card-transparente">
-        <div class="card-body">
-          <div class="cardScrol">
-            <a href=""><img src="../assets/daniela.png" alt=""></a>
-          </div>
-          <h5 class="card-title">Daniela</h5>
-        </div>
-      </div>
-      <div class="card card-transparente">
-        <div class="card-body">
-          <div class="cardScrol">
-            <div class="cardScrol">
-              <a href=""><img src="../assets/lais.png" alt=""></a>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/julia.png" alt="Julia"></a>
+              </div>
+              <h5 class="card-title text-center">Julia</h5>
             </div>
           </div>
-          <h5 class="card-title text-center">Lais</h5>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/lais.png" alt="Lais"></a>
+              </div>
+              <h5 class="card-title text-center">Lais</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/daniela.png" alt="Daniela"></a>
+              </div>
+              <h5 class="card-title">Daniela</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/lais.png" alt="Lais"></a>
+              </div>
+              <h5 class="card-title text-center">Lais</h5>
+            </div>
+          </div>
+    
+          <!-- Cards duplicados -->
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/ivone.png" alt="Ivone"></a>
+              </div>
+              <h5 class="card-title text-center">Ivone</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/julia.png" alt="Julia"></a>
+              </div>
+              <h5 class="card-title text-center">Julia</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/lais.png" alt="Lais"></a>
+              </div>
+              <h5 class="card-title text-center">Lais</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/daniela.png" alt="Daniela"></a>
+              </div>
+              <h5 class="card-title">Daniela</h5>
+            </div>
+          </div>
+          <div class="card card-transparente">
+            <div class="card-body">
+              <div class="cardScrol">
+                <a href=""><img src="../assets/lais.png" alt="Lais"></a>
+              </div>
+              <h5 class="card-title text-center">Lais</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row justify-content-between align-items-center text-center my-5">
+        <div class="col-md-10 d-flex align-items-center">
+          <video src="/assets/Apenas os melhores produtos para seu cabelo.mp4" autoplay loop muted class="img-fluid w-25 me-3 d-none d-md-block" controls></video>
+          <div>
+            <h2>Descubra o segredo de um cabelo incrível com o MyHair!</h2>
+            <p>No MyHair, você encontra os melhores profissionais e produtos para cuidar do seu cabelo. Agende seu horário com facilidade, experimente novos estilos e transforme seu visual. Seu cabelo merece o melhor, e nós estamos aqui para oferecer isso a você!</p>
+          </div>
+        </div>
+        <div class="col-md-2 d-flex align-items-center">
+          <img src="/assets/mulherPng.png" class="img-fluid w-100 me-3" alt="">
         </div>
       </div>
     </div>

@@ -43,22 +43,36 @@ hr {
 .card-transparente {
     background-color: transparent;
     border: none;
-}
-
-.scroll-container {
-    display: flex; 
-    overflow-x: auto; 
+  }
+  
+  .scroll-container {
+    display: flex;
+    overflow-x: hidden; /* Esconde o conteúdo que ultrapassa o container */
     padding: 10px;
-    gap: 10px; 
-    white-space: nowrap; 
-}
-
-.scroll-container .card,
-.scroll-container img {
-    display: inline-block; 
-    flex-shrink: 0; 
-}
-
+    gap: 10px;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .scroll-wrapper {
+    display: flex;
+    animation: scrollAnimation 30s linear infinite; /* Animação de rolagem */
+  }
+  
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateX(0); /* Começa da posição inicial */
+    }
+    100% {
+      transform: translateX(-50%); /* Move os cards para a esquerda */
+    }
+  }
+  
+  .scroll-container .card,
+  .scroll-container img {
+    display: inline-block;
+    flex-shrink: 0;
+  }
 
   footer{
     background-color: #401708;
@@ -547,3 +561,91 @@ hr {
     background-color: #401708; /* Cor da linha */
     margin: 20px 0; /* Espaçamento acima e abaixo da linha */
 }
+
+.prom {
+    margin-left: 150px !important; /* Força a aplicação do estilo */
+}
+
+h2 {
+    font-weight: 300; /* Negrito */
+    font-size: 40px;
+}
+
+.prom p {
+    font-family: 'Lora', serif;
+    font-weight: 400; /* Regular */
+    width: 600px;
+}
+
+/* Tamanho sm (pequeno) */
+@media (max-width: 640px) {
+    .prom {
+        margin-left: 20px !important; /* Reduz margem para telas menores */
+    }
+
+    h2 {
+        font-size: 30px; /* Reduz o tamanho do título */
+    }
+
+    .prom p {
+        width: 500px; /* Reduz largura do parágrafo */
+        font-size: 14px;
+    }
+}
+
+/* Tamanho md (médio) */
+@media (min-width: 641px) and (max-width: 768px) {
+    .prom {
+        margin-left: 0px !important; /* Ajuste intermediário */
+    }
+
+    h2 {
+        font-size: 50px; /* Tamanho intermediário para título */
+    }
+
+    .prom p {
+        width: 500px; /* Ajuste intermediário para largura */
+        font-size: 16px;
+    }
+}
+
+
+  /* Animação para a imagem */
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animação para o texto */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Aplicando as animações */
+  .animate-img {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
+  .animate-text {
+    animation: fadeIn 1.5s ease-out 0.5s forwards; /* Delay de 0.5s */
+    opacity: 0; /* Inicia invisível */
+  }
+
+  .img-fluid{
+    mix-blend-mode: multiply
+  }
+
+  /* Scroll de imagens */
+
+  
