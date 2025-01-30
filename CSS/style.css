@@ -79,6 +79,16 @@ hr {
     color: #F2F2F2; 
 }
 
+.footer-link {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: inherit; /* Mantém a cor do texto original */
+    transition: text-decoration 0.3s ease; /* Adiciona transição suave */
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+
 
 a {
     text-decoration: none;
@@ -608,7 +618,6 @@ h2 {
         font-size: 16px;
     }
 }
-
 
   /* Animação para a imagem */
 @keyframes slideInLeft {
