@@ -367,7 +367,7 @@ h2{
 
 #userForm{
 
-    border-radius: 5px;
+    border-radius: 10px;
     background: rgba(191, 179, 164, 0.50);
     margin: 20px;
 }
@@ -376,6 +376,14 @@ h2{
     border-radius: 5px;
     background: rgba(140, 86, 39, 0.50);
     border: none;
+    border: 1px solid #ccc; 
+    padding: 10px; /* Adiciona um pouco de espaço interno */
+    border-radius: 5px; 
+    color: #F2EADF;
+}
+
+#userForm input::placeholder {
+    color: rgba(242, 234, 223, 0.5); 
 }
 
 #userForm button {
@@ -384,8 +392,9 @@ h2{
     background:#401708;
     color: #F2F2F2;
     border: none;
-    
-
+    padding: 10px;
+    font-weight: 500;
+    font-size: 17px;
 }
 
 #userTable {
@@ -394,12 +403,23 @@ h2{
     border: none;
 }
 
-#userTable button {
+#userTable tr{
+    font-weight: bold;
+}
 
+#userTable tr td{
+    color: #401708;
+    font-weight: 500;
+}
+
+#userTable button {
     background: #401708;
     border: none;
     border-radius: 5px;
     color: #F2EADF;
+    margin-left: 15px;
+    font-weight: 300;
+    margin: 2px;
 }
 
 /* cortes */
@@ -416,3 +436,14 @@ h2{
     
     border-radius: 10px;
 }
+
+
+.hide {
+    display: none;
+}
+
+.nomeDoUsuario{
+    display: none;
+    color: #F2EADF;
+}
+

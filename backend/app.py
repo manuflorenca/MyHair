@@ -3,12 +3,13 @@ API_USER='http://127.0.0.1:5000/usuario'
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from db import get_connection
+ 
 
 # Usa o nome do módulo para configurar a raiz do projeto.
 app = Flask(__name__)
 # Permite que navegadores realizem requisições para o back-end Flask mesmo se estiverem hospedados em domínios ou portas diferentes.
 CORS(app)
-
+CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5501"}})
 
 
 # Criar usuário
@@ -22,10 +23,14 @@ def create_user():
     cursor = conn.cursor()
 
     # Vai usar o json cuja key são os IDs
-    cursor.execute("INSERT INTO users (nome, senha) VALUES (%s, %s)", 
+    cursor.execute("INSERT INTO usuario (nome, senha) VALUES (%s, %s)", 
                    (data['nome'], data['senha']))
     conn.commit()
     return jsonify({"message": "User created successfully"}), 201
+
+
+
+
 
 # Listar usuários
 @app.route('/usuario', methods=['GET'])
@@ -64,3 +69,55 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
+
+
+@app.route('/profissional', methods=['POST'])
+def transformar_usuario_em_profissional():
+    data = request.get_json()
+    usuario_id = data['id']
+    adm = data['adm']
+    senha = data['senha']
+    
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            # Verificar se o usuário existe
+            sql_usuario = "SELECT * FROM usuarios WHERE id = %s"
+            cursor.execute(sql_usuario, (usuario_id,))
+            usuario = cursor.fetchone()
+            
+            if not usuario:
+                return jsonify({'message': 'Usuário não encontrado!'}), 404
+            
+            # Inserir o usuário na tabela de profissionais
+            sql_profissional = "INSERT INTO profissionais (ID_U, Adm, SenhaAdm) VALUES (%s, %s, %s)"
+            cursor.execute(sql_profissional, (usuario_id, adm, senha))
+            
+  
+            
+            connection.commit()
+            return jsonify({'message': 'Usuário transformado em profissional com sucesso!'}), 200
+    finally:
+        connection.close()
+        
+
+@app.route('/contato', methods=['POST'])
+def create_contact():
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    data = request.get_json()
+  
+
+
+    cursor.execute("INSERT INTO contato (profissional_id, email, celular) VALUES (%s, %s, %s)", 
+                   (data['profissional_id'], data['email'], data['celular']))
+    conn.commit()
+    return jsonify({"message": "Contato criado com sucesso"}), 201
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+    

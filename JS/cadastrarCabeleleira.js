@@ -1,88 +1,98 @@
-const API_URL = 'http://127.0.0.1:5000/users';
-
+const API_URL_PROFISSIONAL = 'http://127.0.0.1:5000/profissional';
+const API_URL_USUARIO = 'http://127.0.0.1:5000/usuario';
+const API_URL_contato = 'http://127.0.0.1:5000/contato';
 const userForm = document.getElementById('userForm');
 const updateForm = document.getElementById('updateForm');
 const userTable = document.getElementById('userTable');
 
-// Fetch and display users
-async function fetchUsers() {
-
-    // fetch vai gerar uma promiss para acessar a API
-    const response = await fetch(API_URL);
-    // Trás os dados via API
-    const users = await response.json();
-    userTable.innerHTML = '';
-    users.forEach(user => {
-        userTable.innerHTML += `
-            <tr class="d-flex justify-content-between ">
-                <td class="col-sm-6 col-4">${user.name}</td>
-                <td class="d-none d-sm-block col-4">${user.email}</td>
-                <td class="d-none d-sm-block col-2">${user.age}</td>
-                <td class="col-sm-6 col-2 my-2">
-                    <button onclick="editUser(${user.id}, '${user.name}', '${user.email}', ${user.age})">Edit</button>
-                    <button onclick="deleteUser(${user.id})">Delete</button>
-                </td>
-            </tr>
-        `;
-    });
-}
-
-// Add a new user
-userForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const user = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        age: parseInt(document.getElementById('age').value)
-    };
-    await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
-    });
-    fetchUsers();
-    userForm.reset();
-});
-
-// Delete a user
-async function deleteUser(id) {
-    await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
-    fetchUsers();
-}
-
-// Edit a user
-function editUser(id, name, email, age) {
-    updateForm.style.display = 'block';
-    document.getElementById('updateId').value = id;
-    document.getElementById('updateName').value = name;
-    document.getElementById('updateEmail').value = email;
-    document.getElementById('updateAge').value = age;
-}
-
-// Update a user
-updateForm.addEventListener('submit', async (e) => {
+userForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const id = document.getElementById('updateId').value;
-
-    const updatedUser = {
-        name: document.getElementById('updateName').value,
-        email: document.getElementById('updateEmail').value,
-        age: parseInt(document.getElementById('updateAge').value)
+    const usuario = {
+        nome: document.querySelector("#Nome").value,
+        senha: document.querySelector("#Senha").value
     };
 
+    try {
+        // Cadastra o usuário
+        const response = await fetch(API_URL_USUARIO, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(usuario)
+        });
 
-    await fetch(`${API_URL}/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedUser)
-    });
-    fetchUsers();
-    updateForm.reset();
+        // Verifica se o cadastro foi bem-sucedido
+        if (!response.ok) {
+            throw new Error("Erro ao cadastrar usuário");
+        }
 
-    // Mostrar o botão de atualização
-    updateForm.style.display = 'none';
+        // Busca o ID e a senha do usuário recém-cadastrado
+        const usersResponse = await fetch(API_URL_USUARIO);
+        const users = await usersResponse.json();
+        const newUser  = users.find(user => user.Nome === usuario.nome && user.Senha === usuario.senha);
+
+        if (!newUser ) {
+            throw new Error("Usuário não encontrado após cadastro");
+        }
+
+        
+        // Cria o objeto profissional
+        const profissional = {
+            id: newUser.ID, // Aqui você pega o ID do novo usuário
+            nome: newUser.nome,
+            senha: newUser.senha, // Aqui você pega a senha do novo usuário
+            adm: document.querySelector("#adm").checked, // Supondo que seja um checkbox
+        };
+
+        try{
+        // Cadastra o profissional
+        // Corrigir erro no fetch
+        const profissionalResponse = await fetch(API_URL_PROFISSIONAL, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(profissional)
+        });
+        }catch(erro){
+            console.log("Erro : ",erro.message)
+        }
+
+        // if (!profissionalResponse.ok) {
+        //     throw new Error("Erro ao cadastrar profissional");
+        // }
+
+
+
+
+        // Agora, você pode criar o objeto contato
+        const contato = {
+            profissional_id: profissional.id, // Aqui você usa o ID do profissional
+            email: document.querySelector("#email").value,
+            celular: document.querySelector("#celular").value,
+        };
+
+        // Cadastra o contato
+        await fetch(API_URL_CONTATO, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(contato)
+        });
+
+        userForm.reset();
+
+    } catch (erro) {
+        alert("Não foi possível cadastrar: " + erro.message);
+    }
 });
+
+
+
+
+
+document.getElementById('btn_addCompetencia').addEventListener('click', function() {
+    const container = document.getElementById('competencia-container');
+    container.classList.toggle('hide');
+});
+
 
 // Initial fetch
-fetchUsers();
+// fetchUsers();
