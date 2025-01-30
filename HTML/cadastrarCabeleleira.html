@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            background-color: #F2EADF;
-        }
+      body{
+        background-color: #F2EADF;
+      }
     </style>
 </head>
 <body>
@@ -97,17 +97,24 @@
   <h1 class="text-center my-5 fs-1">Cadastrar a cabeleireira</h1>
 
   <!-- Formulário para adicionar usuário -->
-  <form id="userForm" class="d-flex flex-column bd-highlight mb-4 p-5">
-      <input class="my-2" type="text" id="name" placeholder="Nome" required>
-      <input class="my-2" type="password" id="senha" placeholder="Senha" required>
-      <input class="my-2" type="email" id="email" placeholder="Email" required>
-      <input class="my-2" type="text" id="celular" placeholder="Celular" required> 
-      <div>
-        <input class="my-2" type="checkbox" id="adm" required>
-        <label for="">Adm?</label>
-      </div>
-      <button class="my-2" type="submit">Cadastrar</button>
-  </form>
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12"> <!-- Ajuste o número de colunas conforme necessário -->
+            <form id="userForm" class="d-flex flex-column bd-highlight mb-4 p-5">
+                <input class="my-2" type="text" id="name" placeholder="Nome" required>
+                <input class="my-2" type="password" id="senha" placeholder="Senha" required>
+                <input class="my-2" type="email" id="email" placeholder="Email" required>
+                <input class="my-2" type="text" id="celular" placeholder="Celular" required> 
+                <div>
+                    <input class="my-2" type="checkbox" id="adm" required>
+                    <label for="">Adm?</label>
+                </div>
+                <button class="my-2" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 
   <!-- Formulário para atualizar usuário -->
   <form id="updateForm" style="display: none;">
@@ -121,7 +128,7 @@
 
   <!-- Tabela de usuários -->
 
-  <h1 class="text-center fs-1 my-4 fw-bold"> Profissionais</h1>
+  <h1 class="text-center fs-1 my-4 fw-bold">Profissionais</h1>
 
   <h2 class="my-4 text-center my-5 fs-2">Lista de  Profissionais</h2>
 
@@ -154,38 +161,53 @@
   <!-- Formulario de cadastro de profissional -->
   
   <div id="competencia-container" class="hide">
-    <h2 class="my-4 text-center fs-1 my-5">Funções dos  Profissionais</h2> 
-      <form class="d-inline-flex p-2 bd-highlight bd-highlight mt-4 mb-3">
-          <div class="form-group d-inline-flex p-2 bd-highlight ">
-          <label for="exampleFormControlFile1"><i class="bi bi-camera-fill fs-4"> Foto do(a) profissional:</i></label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
-      </form>
-
-    <form class="d-flex flex-column bd-highlight p-5">
-      <div class="form-group">
-        <label for="exampleFormControlInput1"><i class="bi bi-person-fill fs-4"> Nome da cabeleireira:</i></label>
-        <input type="name" class="form-control d-flex justify-content-center align-items-center my-2 m-3 " id="exampleFormControlInput1">
+    <h2 class="text-center fs-1 my-4 fw-bold">Funções dos  Profissionais</h2> 
+    <h3 class="text-center"><i class="bi bi-camera-fill fs-4"> Foto do(a) profissional:</i></h3>
+    <form class="d-flex justify-content-center mt-4 mb-3">
+      <div class="form-group d-inline-flex p-2 bd-highlight">
+          <label for="exampleFormControlFile1" class="custom-file-button">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="updateFileName()">
+              <span class="custom-file-name">Selecionar imagem</span>
+          </label>
       </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1"><i class="bi bi-caret-down-fill fs-4"> Defina as funcionalidades do(a) profissional:</i></label>
-        <select class="form-control d-flex justify-content-center align-items-center my-2 m-3" id="exampleFormControlSelect1">
-          <option>Corte feminino</option>
-          <option>Progresiva</option>
-          <option>Corte masculino</option>
-          <option>Tintura</option>
-        </select>
-      </div>
-      <div class="form-group ">
-        <label for="exampleFormControlSelect2"><i class="bi bi-circle-fill fs-4"> Funcionalidades:</i></label>
-        <select multiple class="form-control d-flex justify-content-center align-items-center my-2 m-3" id="exampleFormControlSelect2">
-          <option>Corte feminino</option>
-          <option>Progresiva</option>
-          <option>Corte masculino</option>
-          <option>Tintura</option>
-        </select>
-      </div>
+  </form>
+  
+  <div class="container">
+    <form class="d-flex flex-column bd-highlight p-5" id="cabeleireiraForm">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group p-3 ">
+                    <label for="exampleFormControlInput1" class="subTitle text-center my-1 fs-4">Nome da cabeleireira:</label>
+                    <input type="text" class="form-control my-2 p-3" id="exampleFormControlInput1" placeholder="Digite o nome">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group p-3 ">
+                    <label for="exampleFormControlSelect1" class="subTitle text-center my-1 fs-4">Defina as funcionalidades do(a) profissional:</label>
+                    <select class="form-control my-2 p-3" id="exampleFormControlSelect1">
+                        <option>Corte feminino</option>
+                        <option>Progresiva</option>
+                        <option>Corte masculino</option>
+                        <option>Tintura</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group p-3">
+                    <label for="exampleFormControlSelect2" class="subTitle text-center my-1 fs-4">Lista de funcionalidades:</label>
+                    <select multiple class="form-control my-2 p-3" id="exampleFormControlSelect2">
+                        <option>Corte feminino</option>
+                        <option>Progresiva</option>
+                        <option>Corte masculino</option>
+                        <option>Tintura</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </form>
+</div>
+
+
   </div>
 
   <script src="/JS/cadastrarCabeleleira.js"></script>

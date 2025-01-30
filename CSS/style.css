@@ -62,8 +62,9 @@ hr {
 
   footer{
     background-color: #401708;
-    color: #F2F2F2;
+    color: #F2F2F2; 
 }
+
 
 a {
     text-decoration: none;
@@ -367,7 +368,7 @@ h2{
 
 #userForm{
 
-    border-radius: 10px;
+    border-radius: 5px;
     background: rgba(191, 179, 164, 0.50);
     margin: 20px;
 }
@@ -447,3 +448,102 @@ h2{
     color: #F2EADF;
 }
 
+/* Card de imagem no cadastrar cabeleleira */
+
+/* Ocultar o input file original */
+input[type="file"] {
+    display: none; /* Oculta o input file */
+}
+
+/* Estilizar o botão personalizado */
+.custom-file-button {
+    background-color: #8C5627; /* Cor de fundo */
+    opacity: 0.9; /* Opacidade */
+    width: 400px; /* Largura do botão */
+    height: 400px; /* Altura do botão */
+    border-radius: 50%; /* Bordas arredondadas para um círculo */
+    cursor: pointer; /* Cursor em forma de mão */
+    display: flex; /* Flexbox para alinhar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: relative; /* Necessário para posicionar o ícone corretamente */
+}
+
+/* Efeito hover para o botão personalizado */
+.custom-file-button:hover {
+    background-color: #8C5627; /* Cor de fundo ao passar o mouse */
+    opacity: 1; /* Opacidade total ao passar o mouse */
+}
+
+/* Estilizar o texto do nome do arquivo */
+.custom-file-name {
+    color: #F2EADF; /* Cor do texto */
+    position: absolute; /* Posiciona o texto dentro do botão */
+    bottom: 10%; /* Distância do fundo do botão */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar corretamente */
+}
+
+/* Estilizar o ícone do botão */
+.custom-file-icon {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente dentro do botão */
+    right: 10px; /* Distância da borda direita */
+    transform: translateY(-50%); /* Ajusta a posição verticalmente */
+}
+
+
+/* Adicionar comp */
+
+/* Formulário de cadastrar cabeleireira */
+#cabeleireiraForm {
+    background-color: #8C5627; /* Fundo semitransparente */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#cabeleireiraForm .form-group {
+    background-color: #F2EADF; /* Fundo claro para os grupos */
+    padding: 15px; /* Espaçamento interno */
+    border: none;
+}
+
+#cabeleireiraForm label {
+    font-weight: bold; /* Negrito nos rótulos */
+    color: #8C5627; 
+}
+
+#cabeleireiraForm input,
+#cabeleireiraForm select {
+    border: 2px solid #8C5627; /* Borda com cor temática */
+
+    background-color: rgba(242, 234, 223, 0.8); /* Fundo semitransparente */
+    color: #401708; /* Cor do texto */
+}
+
+#cabeleireiraForm input::placeholder {
+    color: rgba(64, 23, 8, 0.5); /* Placeholder mais claro */
+}
+
+#cabeleireiraForm input:hover,
+#cabeleireiraForm select:hover {
+    background-color: rgba(191, 179, 164, 0.7); /* Fundo ao passar o mouse */
+}
+
+#cabeleireiraForm input:focus,
+#cabeleireiraForm select:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #401708; /* Borda mais escura ao focar */
+    box-shadow: 0px 0px 5px rgba(64, 23, 8, 0.5); /* Sombra ao focar */
+}
+
+
+/* Começando a ajustar os nossos profissionais */
+
+hr {
+    border: none; /* Remove a borda padrão */
+    height: 1px; /* Define a altura da linha */
+    background-color: #401708; /* Cor da linha */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+}
