@@ -41,9 +41,11 @@ userForm.addEventListener("submit", async (e) => {
 
 function handleSubmit(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
+    
+    // Limpa os campos do formulário
+    const form = document.getElementById('userForm');
+    form.reset();
 
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário, por exemplo, via AJAX
-
-    // Limpar os campos do formulário
-    document.getElementById('userForm').reset();
+    // Exibe uma mensagem de sucesso (opcional)
+    alert("Usuário cadastrado com sucesso!");
 }

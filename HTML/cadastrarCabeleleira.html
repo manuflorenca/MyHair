@@ -99,23 +99,24 @@
   <!-- Formulário para adicionar usuário -->
   <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12"> <!-- Ajuste o número de colunas conforme necessário -->
-            <form id="userForm" class="d-flex flex-column bd-highlight mb-4 p-5">
+        <div class="col-md-12">
+            <form id="userForm" class="d-flex flex-column bd-highlight mb-4 p-5" onsubmit="handleSubmit(event)">
                 <input class="my-2" type="text" id="name" placeholder="Nome" required>
                 <input class="my-2" type="password" id="senha" placeholder="Senha" required>
                 <input class="my-2" type="email" id="email" placeholder="Email" required>
                 <input class="my-2" type="text" id="celular" placeholder="Celular" required> 
+                
                 <!-- Checkbox estilizado -->
                 <div class="form-check my-2">
-                  <input type="checkbox" id="adm" class="form-check-input styled-checkbox" required>
-                  <label for="adm" class="form-check-label">O usuário vai ser administrador ?</label>
-              </div>
-                <button class="my-2" type="submit">Cadastrar</button>
+                    <input type="checkbox" id="adm" class="form-check-input styled-checkbox">
+                    <label for="adm" class="form-check-label">O usuário vai ser administrador?</label>
+                </div>
+                
+                <button class="my-2 btn btn-primary" type="submit">Cadastrar</button>
             </form>
         </div>
     </div>
 </div>
-
 
   <!-- Formulário para atualizar usuário -->
   <form id="updateForm" style="display: none;">
