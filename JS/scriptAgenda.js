@@ -1,3 +1,4 @@
+const API_URL = 'http://127.0.0.1:5000/agenda';
 
 // calendario
 
@@ -29,6 +30,8 @@ const isLeapYear = (year) => {
   const dayTextFormate = document.querySelector('.day-text-formate');
   const timeFormate = document.querySelector('.time-formate');
   const dateFormate = document.querySelector('.date-formate');
+
+  console.log("Eu tô aqui")
   
   month_picker.onclick = () => {
     month_list.classList.remove('hideonce');
