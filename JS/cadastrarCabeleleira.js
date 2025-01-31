@@ -1,4 +1,5 @@
-const API_URL = 'http://127.0.0.1:5000/profissional';
+const API_URL = 'http://127.0.0.1:5000/profissional'; //http://127.0.0.1:5000/profissional
+
 
 const userForm = document.getElementById('userForm');
 const userTable = document.getElementById('userTable');
@@ -12,8 +13,8 @@ userForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     
     const dados = {
-        nome: document.querySelector("#Nome").value,
-        senha: document.querySelector("#Senha").value,
+        nome: document.querySelector("#name").value,
+        senha: document.querySelector("#senha").value,
         email: document.querySelector("#email").value,
         celular: document.querySelector("#celular").value,
         adm: document.querySelector("#adm").checked
@@ -26,6 +27,8 @@ userForm.addEventListener("submit", async (e) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)
         });
+
+        console.log("O erro tá aqui")
        
         const result = await response.json();
         alert(result.message || result.error);
