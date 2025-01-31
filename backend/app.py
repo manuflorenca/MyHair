@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para todas as rotas
-from backend.db import get_connection
+from db import get_connection
 
 
 # Criar usuário
@@ -88,7 +88,7 @@ def inserir_usuario():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run( debug=True)
 
 
 
