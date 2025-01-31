@@ -390,36 +390,66 @@ h2{
 
 /* Cadastrar cabeleleira formulario */
 
-#userForm{
-
+#userForm {
     border-radius: 5px;
-    background: rgba(191, 179, 164, 0.50);
+    background: #8C5627;
     margin: 20px;
+    padding: 20px; /* Adicionando padding para melhor espaçamento */
 }
 
 #userForm input {
     border-radius: 5px;
-    background: rgba(140, 86, 39, 0.50);
-    border: none;
-    border: 1px solid #ccc; 
+    background: #F2EADF;
+    border: 2px solid #F2EADF; 
     padding: 10px; /* Adiciona um pouco de espaço interno */
-    border-radius: 5px; 
-    color: #F2EADF;
+    color: #8C5627;
 }
 
 #userForm input::placeholder {
-    color: rgba(242, 234, 223, 0.5); 
+    color: #8C5627; 
 }
 
 #userForm button {
-
     border-radius: 5px;
     background:#401708;
+    opacity: 0.9;
     color: #F2F2F2;
     border: none;
     padding: 10px;
     font-weight: 500;
     font-size: 17px;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilização do checkbox */
+.styled-checkbox {
+    appearance: none; /* Remove o estilo padrão */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F2EADF; /* Borda igual ao resto do formulário */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer;
+    position: relative; /* Necessário para posicionar o símbolo de verificação */
+}
+
+.styled-checkbox:checked::after {
+    content: '✓'; /* Símbolo de check */
+    color:#8C5627;
+    font-size: 14px;
+    position: absolute;
+    top: 0; /* Centraliza verticalmente */
+    left: 3px; /* Ajusta a posição horizontalmente */
+}
+
+/* Ajuste adicional para alinhar o texto com o checkbox */
+.form-check-label {
+    margin-left: 8px; /* Espaço entre o checkbox e o texto */
+}
+
+
+#userForm button:hover{
+    opacity: 1;
+    transition: 1s;
 }
 
 #userTable {
@@ -445,6 +475,10 @@ h2{
     margin-left: 15px;
     font-weight: 300;
     margin: 2px;
+}
+
+.form-check-label{
+    color: #F2EADF;
 }
 
 /* cortes */

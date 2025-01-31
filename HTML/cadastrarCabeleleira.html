@@ -105,10 +105,11 @@
                 <input class="my-2" type="password" id="senha" placeholder="Senha" required>
                 <input class="my-2" type="email" id="email" placeholder="Email" required>
                 <input class="my-2" type="text" id="celular" placeholder="Celular" required> 
-                <div>
-                    <input class="my-2" type="checkbox" id="adm" required>
-                    <label for="">Adm?</label>
-                </div>
+                <!-- Checkbox estilizado -->
+                <div class="form-check my-2">
+                  <input type="checkbox" id="adm" class="form-check-input styled-checkbox" required>
+                  <label for="adm" class="form-check-label">O usuário vai ser administrador ?</label>
+              </div>
                 <button class="my-2" type="submit">Cadastrar</button>
             </form>
         </div>
