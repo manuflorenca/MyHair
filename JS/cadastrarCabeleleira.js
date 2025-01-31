@@ -33,3 +33,14 @@ userForm.addEventListener("submit", async (e) => {
         console.error("Erro ao cadastrar usuário: ", error);
     }
 });
+
+// Função de limpar os inputs (Front)
+
+function handleSubmit(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Aqui você pode adicionar a lógica para enviar os dados do formulário, por exemplo, via AJAX
+
+    // Limpar os campos do formulário
+    document.getElementById('userForm').reset();
+}
