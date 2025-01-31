@@ -86,79 +86,79 @@ def inserir_usuario():
     except Exception as e:
         return jsonify({"error inserir usuario": str(e)}), 500
 
-@app.route('/agenda', methods=['POST'])
-def criar_agendamento():
-    data = request.json
-    try:
-        conn = get_connection()
-        cursor = conn.cursor()
+# @app.route('/agenda', methods=['POST'])
+# def criar_agendamento():
+#     data = request.json
+#     try:
+#         conn = get_connection()
+#         cursor = conn.cursor()
 
-        cursor.execute(
-            "INSERT INTO agenda (ID_C, ID_S, ID_P, Status, Hora, Dati) VALUES (%s, %s, %s, %s, %s, %s)",
-            (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati'])
-        )
+#         cursor.execute(
+#             "INSERT INTO agenda (ID_C, ID_S, ID_P, Status, Hora, Dati) VALUES (%s, %s, %s, %s, %s, %s)",
+#             (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati'])
+#         )
 
-        conn.commit()
-        cursor.close()
-        conn.close()
+#         conn.commit()
+#         cursor.close()
+#         conn.close()
 
-        return jsonify({"message": "Agendamento criado com sucesso!"}), 201
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+#         return jsonify({"message": "Agendamento criado com sucesso!"}), 201
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
-# Listar todos os agendamentos
-@app.route('/agenda', methods=['GET'])
-def listar_agendamentos():
-    try:
-        conn = get_connection()
-        cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM agenda")
-        agendamentos = cursor.fetchall()
+# # Listar todos os agendamentos
+# @app.route('/agenda', methods=['GET'])
+# def listar_agendamentos():
+#     try:
+#         conn = get_connection()
+#         cursor = conn.cursor(dictionary=True)
+#         cursor.execute("SELECT * FROM agenda")
+#         agendamentos = cursor.fetchall()
 
-        cursor.close()
-        conn.close()
+#         cursor.close()
+#         conn.close()
 
-        return jsonify(agendamentos), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+#         return jsonify(agendamentos), 200
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
-# Atualizar um agendamento
-@app.route('/agenda/<int:id>', methods=['PUT'])
-def atualizar_agendamento(id):
-    data = request.json
-    try:
-        conn = get_connection()
-        cursor = conn.cursor()
+# # Atualizar um agendamento
+# @app.route('/agenda/<int:id>', methods=['PUT'])
+# def atualizar_agendamento(id):
+#     data = request.json
+#     try:
+#         conn = get_connection()
+#         cursor = conn.cursor()
 
-        cursor.execute(
-            "UPDATE agenda SET ID_C=%s, ID_S=%s, ID_P=%s, Status=%s, Hora=%s, Dati=%s WHERE ID=%s",
-            (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati'], id)
-        )
+#         cursor.execute(
+#             "UPDATE agenda SET ID_C=%s, ID_S=%s, ID_P=%s, Status=%s, Hora=%s, Dati=%s WHERE ID=%s",
+#             (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati'], id)
+#         )
 
-        conn.commit()
-        cursor.close()
-        conn.close()
+#         conn.commit()
+#         cursor.close()
+#         conn.close()
 
-        return jsonify({"message": "Agendamento atualizado com sucesso!"}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+#         return jsonify({"message": "Agendamento atualizado com sucesso!"}), 200
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
-# Deletar um agendamento
-@app.route('/agenda/<int:id>', methods=['DELETE'])
-def deletar_agendamento(id):
-    try:
-        conn = get_connection()
-        cursor = conn.cursor()
+# # Deletar um agendamento
+# @app.route('/agenda/<int:id>', methods=['DELETE'])
+# def deletar_agendamento(id):
+#     try:
+#         conn = get_connection()
+#         cursor = conn.cursor()
 
-        cursor.execute("DELETE FROM agenda WHERE ID=%s", (id,))
+#         cursor.execute("DELETE FROM agenda WHERE ID=%s", (id,))
 
-        conn.commit()
-        cursor.close()
-        conn.close()
+#         conn.commit()
+#         cursor.close()
+#         conn.close()
 
-        return jsonify({"message": "Agendamento deletado com sucesso!"}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+#         return jsonify({"message": "Agendamento deletado com sucesso!"}), 200
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run( debug=True)
