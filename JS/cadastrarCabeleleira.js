@@ -32,20 +32,9 @@ userForm.addEventListener("submit", async (e) => {
        
         const result = await response.json();
         alert(result.message || result.error);
+        const form = document.getElementById('userForm');
+        form.reset();
     } catch (error) {
         console.error("Erro ao cadastrar usuário: ", error);
     }
 });
-
-// Função de limpar os inputs (Front)
-
-function handleSubmit(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
-    // Limpa os campos do formulário
-    const form = document.getElementById('userForm');
-    form.reset();
-
-    // Exibe uma mensagem de sucesso (opcional)
-    alert("Profisional cadastrado com sucesso!");
-}
