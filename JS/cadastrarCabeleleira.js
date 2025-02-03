@@ -41,11 +41,11 @@ userForm.addEventListener("submit", async (e) => {
 
 function handleSubmit(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
-    
+
     // Limpa os campos do formulário
     const form = document.getElementById('userForm');
     form.reset();
 
     // Exibe uma mensagem de sucesso (opcional)
-    alert("Usuário cadastrado com sucesso!");
+    alert("Profisional cadastrado com sucesso!");
 }
