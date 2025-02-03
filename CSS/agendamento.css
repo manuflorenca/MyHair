@@ -1,0 +1,19 @@
+*{
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #F2F2F2 ;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+

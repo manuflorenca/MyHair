@@ -11,6 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        footer{
+        background-color: #401708;
+        color: #F2F2F2; 
+        position: absolute;
+        bottom: 0;
+        width: 100%; /* Largura total */
+    }
+      </style>
 </head>
 <body>
 
@@ -101,37 +110,25 @@
 <!-- Seleção de escolha -->
 
 <div class="d-flex flex-column align-items-center mt-5">
-  <h1> Escolha a Cabeleireira</h1>
+  <h1>Escolha o serviço</h1>
 </div>
 
 <div class="d-flex flex-column align-items-center my-5 gap-5 align-items-start">
-  <!-- Primeiro dropdown -->
+
   <div class="btn-group">
     <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Selecionar a cabelereira manualmente
+      Selecione o serviço
     </button>
-    <ul id="ID_P" class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" id="dona-cleide">Dona Cleide</a></li>
-      <li><a class="dropdown-item" href="#" id="dona-lurdes">Dona Lurdes</a></li>
-      <li><a class="dropdown-item" href="#" id="dona-maria">Dona Maria</a></li>
-    </ul>
+    <ul id="ID_S" class="dropdown-menu">
+        <li><a class="dropdown-item" href="#" id="corte">Corte</a></li>
+        <li><a class="dropdown-item" href="#" id="manicure">Manicure</a></li>
+        <li><a class="dropdown-item" href="#" id="tintura">Tintura</a></li>
+      </ul>  
   </div>
 
-  <p>ou</p>
-
-  <!-- Segundo dropdown -->
-  <div class="btn-group">
-    <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Ver quem está disponivel
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Dona cleide</a></li>
-    </ul>
-  </div>
 </div>
 
-
-<img class="d-block mx-auto" src="/assets/cabelereira.png" alt="">
+<img class="d-block mx-auto p-5" src="/assets/cabeleleiros.jpg" width="500px" alt="">
 
 <!-- Footer -->
 <footer class="d-flex text-center">
@@ -160,29 +157,24 @@
     </div>
   </div>
 </footer>
-
-<!-- Redirecionar para a outra pagina -->
-
+<!-- Ir para a outra pagina -->
 <script>
-  // script.js
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Pegue todos os itens do dropdown
-  const donaCleide = document.getElementById('dona-cleide');
-  const donaLurdes = document.getElementById('dona-lurdes');
-  const donaMaria = document.getElementById('dona-maria');
-  const donaCleideAvailable = document.getElementById('dona-cleide-available');
+  // Pegue todas as opções do dropdown
+  const corte = document.getElementById('corte');
+  const manicure = document.getElementById('manicure');
+  const tintura = document.getElementById('tintura');
 
-  // Função para redirecionar para a página de agendamento
-  function redirecionarParaAgendamento() {
-    window.location.href = 'agendamento.html';  // Redireciona para agendamento.html
+  // Função para redirecionar para o HTML desejado
+  function redirecionar() {
+    window.location.href = 'escolhaCabeleireira.html';
   }
 
-  // Adicionando eventos de clique para cada item do dropdown
-  donaCleide.addEventListener('click', redirecionarParaAgendamento);
-  donaLurdes.addEventListener('click', redirecionarParaAgendamento);
-  donaMaria.addEventListener('click', redirecionarParaAgendamento);
-  donaCleideAvailable.addEventListener('click', redirecionarParaAgendamento);
+  // Adicionando o evento de clique em cada item do dropdown
+  corte.addEventListener('click', redirecionar);
+  manicure.addEventListener('click', redirecionar);
+  tintura.addEventListener('click', redirecionar);
 });
 
 </script>

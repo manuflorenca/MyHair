@@ -20,7 +20,7 @@ userForm.addEventListener("submit", async (e) => {
         adm: document.querySelector("#adm").checked
     };
     
-    
+   
     try {
         const response = await fetch(API_URL, {
             method: "POST",
