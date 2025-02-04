@@ -6,10 +6,50 @@ body {
     padding: 50px;
 }
 
+/* Estilo para o container das setas */
+.setas-container {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #f2f2f2; 
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave (opcional) */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    display: flex;
+    justify-content: space-between; /* Espaço entre os botões */
+    align-items: center;
+  }
+  
+  /* Estilo para os botões das setas */
+  .setas-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #8C5627; /* Cor do ícone */
+    transition: color 0.3s ease;
+  }
+  
+  .setas-container button a i{
+      color: #8C5627; /* Cor do ícone */
+    text-decoration: none;
+  }
+  
+  
+  .setas-container button a i:hover {
+    color: #401708; /* Cor do ícone ao passar o mouse */
+  }
+
+.img {
+    fill: #401708;
+  }
+  
+
 h1 {
     font-family: 'Karla', sans-serif;
     text-align: center;
-    color: #2d3748;
+    color:#401708;
     margin-bottom: 30px;
 }
 
@@ -36,6 +76,15 @@ h1 {
 }
 
 /* Estilizando a tabela */
+
+.tabela-container {
+    display: flex;
+    justify-content: center; /* Centraliza a tabela horizontalmente */
+    align-items: center;     /* Centraliza a tabela verticalmente (se necessário) */
+    padding: 5px;
+    margin: 0 auto;          /* Garante que o contêiner tenha uma margem automática */
+}
+
 #tabela-agenda {
     width: 100%;
     margin-top: 20px;
@@ -43,6 +92,7 @@ h1 {
     border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite rolar horizontalmente, se necessário */
 }
 
 #tabela-agenda th {
@@ -67,6 +117,33 @@ h1 {
     background-color: #e9e9e9;
 }
 
+.container-agendamento-final {
+    display: flex;
+    flex-direction: row; /* Organiza os itens em linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+}
+
+
+.btnFinal{
+    padding: 10px;
+    width: 20em;
+    border-radius: 7px;
+    background: #401708;
+    border: none;
+    opacity: 0.9;
+}
+
+.btnFinal:hover{
+    opacity: 1;
+}
+
+.btnFinal a{
+    text-decoration: none;
+    color: #F2EADF;
+}
+
 /* Ajuste para celular */
 @media screen and (max-width: 768px) {
     #tabela-agenda th, #tabela-agenda td {
@@ -85,6 +162,7 @@ h1 {
     margin-top: 10px;
     width: 200px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 /* Estilizando a imagem */

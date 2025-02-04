@@ -14,8 +14,13 @@
 </head>
 <body>
 
+    <div class="setas-container fixed-top">
+      <button class="tras"><a href="/HTML/servicos.html"><i class="bi bi-arrow-left-short"></i></a></button>
+      <button class="frente"><a href="/HTML/agendamento.html"><i class="bi bi-arrow-right-short"></i></a></button>
+    </div>
+
     <div>
-        <img src="/assets/Clock Check.svg" alt="">
+        <img class="my-3" src="/assets/Clock Check.svg" alt="">
         <h1>Marque seu agendamento</h1>
     </div>
 
@@ -26,37 +31,42 @@
         <p id="resultado"></p>
     </div>
 
-    <table id="tabela-agenda" class="table">
-        <thead >
-          <tr>
-            <th scope="col">#</th>
-            <th id="servico" scope="col">Serviço</th>
-            <th id="profissional" scope="col">Profissional</th>
-            <th id="status" scope="col">Status</th>
-            <th id="horario" scope="col">Horario</th>
-            <th id="data" scope="col">Data</th>
-          </tr>
-        </thead>
-        <tbody class="table-group-divider">
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table> 
+    <div class="tabela-container">
+      <table id="tabela-agenda" class="table">
+          <thead >
+            <tr>
+              <th scope="col">#</th>
+              <th id="servico" scope="col">Serviço</th>
+              <th id="profissional" scope="col">Profissional</th>
+              <th id="status" scope="col">Status</th>
+              <th id="horario" scope="col">Horario</th>
+              <th id="data" scope="col">Data</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table> 
+    </div>
+      <div class="container-agendamento-final">
+        <button class="btnFinal"><a href="agendamentoRealizado.html">Confirmar o agendamento</a></button>
+      </div>
     <script src="/JS/agendamento.js"></script>
 </body>
 </html>
