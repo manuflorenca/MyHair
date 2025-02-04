@@ -42,8 +42,9 @@ loginLink.addEventListener('click', () => {
   userForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const response = await fetch(API_URL);
-    // Trás os dados via API
     const users = await response.json();
+    console.log(users); // Verifique o formato dos dados
+    
     const user = users.find(user => user.Nome === nome.value && user.Senha === senha.value);
     if (user) {
         // Se o usuário for encontrado, cria a sessão e redireciona para o menu
@@ -71,4 +72,20 @@ document.querySelector('.register-link').addEventListener('click', function() {
 document.querySelector('.login-link').addEventListener('click', function() {
     document.querySelector('.form-box.register').style.display = 'none';
     document.querySelector('.form-box.login').style.display = 'block';
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const usuario = sessionStorage.getItem('usuario');
+
+if(usuario){
+    const nomeUsuario=document.querySelector(".nomeDoUsuario");
+    const iconeUsuario=document.querySelector("#icon");
+    iconeUsuario.style.display = 'none';
+    nomeUsuario.style.display = 'block';
+    nomeUsuario.innerHTML=usuario
+
+} 
+
 });
