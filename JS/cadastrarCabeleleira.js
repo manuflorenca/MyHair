@@ -1,6 +1,5 @@
 const API_URL = 'http://127.0.0.1:5000/profissional'; //http://127.0.0.1:5000/profissional
 
-
 const userForm = document.getElementById('userForm');
 const userTable = document.getElementById('userTable');
 
@@ -20,7 +19,6 @@ userForm.addEventListener("submit", async (e) => {
         adm: document.querySelector("#adm").checked
     };
     
-   
     try {
         const response = await fetch(API_URL, {
             method: "POST",

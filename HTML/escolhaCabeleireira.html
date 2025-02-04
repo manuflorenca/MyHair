@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolha de cabeleireira</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/agenda2.css">
     <link rel="icon" href="../assets/logo (2).png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,153 +13,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <main class="container d-flex justify-content-center align-items-center min-vh-100">
+    <!-- Container das setas fixo no topo -->
+    <div class="setas-container fixed-top">
+        <button class="tras"><a href="/HTML/servicos.html"><i class="bi bi-arrow-left-short"></i></a></button>
+        <button class="frente"><a href="/HTML/agendamento.html"><i class="bi bi-arrow-right-short"></i></a></button>
+    </div>
 
-  <header class="header" id="navbar">
-    <div class="menu-container">
-      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
-  
-      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="offcanvas-header">
-          <button type="button" id="btnClose" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="row align-items-center w-100">
+        <!-- Imagem (visível apenas em telas médias e maiores) -->
+        <div class="col-md-6 d-none d-md-block">
+            <div class="bemvindo-img animacao-imagem">
+                <img src="/assets/imagemCabeleleiro.png" class="img-fluid" alt="Imagem dos Cabelereiros">
+            </div>
         </div>
-        <div class="offcanvas-body">
-          <ul>
-            <li class="fs-4"><a href="/HTML/index.html">Home</a></li>
-            <li class="fs-4"><a href="/HTML/agenda.html">Agenda</a></li>
-            <li class="fs-4"><a href="/HTML/escolhaCabeleireira.html">Escolha sua cabeleireira</a></li>
-            <li class="fs-4"><a href="/HTML/nossosProfissionais.html">Nossos profissionais</a></li>
-            <li class="fs-4"><a href="/HTML/cadastrarCabeleleira.html">Cadastro de cabeleleiras</a></li>
-          </ul>
+
+        <!-- Texto e Botão -->
+        <div class="col-12 col-md-6">
+            <div class="bemvindo-container d-flex flex-column justify-content-center align-items-center text-center text-md-start">
+                <h1 class="titulo">Escolha a profissional</h1>
+                <p class="boas-vindas">
+                  Escolha uma de nossas especialistas para um atendimento de qualidade e personalizado. Confie em quem entende do assunto e realce sua beleza com cuidado e dedicação!
+                </p>
+                <div class="btn-group">
+                    <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Selecione a profissional
+                    </button>
+                    <ul id="ID_P" class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" id="dona-cleide">Dona Cleide</a></li>
+                      <li><a class="dropdown-item" href="#" id="dona-lurdes">Dona Lurdes</a></li>
+                      <li><a class="dropdown-item" href="#" id="dona-maria">Dona Maria</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  
-  
-    <!-- Botão de Popup (à direita) -->
-    <a href="#">
-        <button id="btnPopup">
-          <i class="bi bi-person-fill fs-1 text-light"></i>
-        </button>
-    </a>
-  </header>
-
-<!-- Tela de login --> 
-<div class="wrapper">
-  <span class="icon-close">
-    <i class="bi bi-x-lg"></i>
-  </span>
-  <div class="form-box login">
-    <form id="formLogin"> <!-- Adicionei a tag <form> aqui -->
-      <div>
-        <img src="../assets/FazerLogin.png" alt="">
-        <img src="../assets/UserTelaLogin.png" alt="">
-      </div>
-      <div class="input-box">
-        <input id="nome" type="text" placeholder="Nome" required>
-      </div>
-      <div class="input-box">
-        <input id="senha" type="password" placeholder="Senha" required>
-      </div>
-      <select class="form-select form-select-lg mb-2 fs-6 my-2" aria-label="Small select example">
-        <option selected>Você é cliente ou profissional?</option>
-        <option value="1">Cliente</option>
-        <option value="2">Profissional</option>
-      </select>
-
-      <button id="loginBtn" type="submit" class="btn">Entrar</button>
-     
-      <div class="login-register">
-        <p>Ainda não tem uma conta? <a href="#" class="register-link" style="text-decoration: underline;">Faça sua conta</a></p>
-      </div>
-      <div id="error-message" style="color: red;"></div> 
-    </form>
-  </div>
-
-  <!-- Tela de cadastro -->
-  <form id="formCadastro" class="form-box register"> 
-    <div class="form">
-      <div>
-        <img src="../assets/FazerCadastro.png" width="200px" alt="">
-        <img src="../assets/UserTelaLogin.png" alt="">
-      </div>
-      <div class="input-box">
-        <input id="nome_cadastrar" type="text" placeholder="Nome" required>
-      </div>
-      <div class="input-box">
-        <input id="senha_cadastrar" type="password" placeholder="Senha" required>
-      </div>
-
-      <button type="submit" class="btn">Cadastrar</button>
-
-      <div class="login-register">
-        <p>Já tem uma conta? <a href="#" class="login-link" style="text-decoration: underline;"> Voltar</a></p>
-      </div>
-    </div>
-  </form>
-</div>
-
-<!-- Seleção de escolha -->
-
-<div class="d-flex flex-column align-items-center mt-5">
-  <h1> Escolha a Cabeleireira</h1>
-</div>
-
-<div class="d-flex flex-column align-items-center my-5 gap-5 align-items-start">
-  <!-- Primeiro dropdown -->
-  <div class="btn-group">
-    <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Selecionar a cabelereira manualmente
-    </button>
-    <ul id="ID_P" class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" id="dona-cleide">Dona Cleide</a></li>
-      <li><a class="dropdown-item" href="#" id="dona-lurdes">Dona Lurdes</a></li>
-      <li><a class="dropdown-item" href="#" id="dona-maria">Dona Maria</a></li>
-    </ul>
-  </div>
-
-  <p>ou</p>
-
-  <!-- Segundo dropdown -->
-  <div class="btn-group">
-    <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Ver quem está disponivel
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Dona cleide</a></li>
-    </ul>
-  </div>
-</div>
-
-
-<img class="d-block mx-auto" src="/assets/cabelereira.png" alt="">
-
-<!-- Footer -->
-<footer class="d-flex text-center">
-  <div class="container p-4">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-lg-6">
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="footer-link"><i class="bi bi-geo-alt-fill"> Localização</i></a>
-          </li>
-          <li>
-            <a href="#!" class="footer-link"><i class="bi bi-whatsapp"> Whatsapp</i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="footer-link"><i class="bi bi-instagram"> Instagram</i></a>
-          </li>
-          <li>
-            <a href="#!" class="footer-link"><i class="bi bi-facebook"> Facebook</i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+</main>
 
 <!-- Redirecionar para a outra pagina -->
 
