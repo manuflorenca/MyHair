@@ -12,37 +12,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <main class="container d-flex justify-content-center align-items-center min-vh-100">
+
+<main class="container d-flex justify-content-center align-items-center min-vh-100">
     <!-- Container das setas fixo no topo -->
     <div class="setas-container fixed-top">
-        <button class="tras"><a href="/HTML/servicos.html"><i class="bi bi-arrow-left-short"></i></a></button>
-        <button class="frente"><a href="/HTML/agendamento.html"><i class="bi bi-arrow-right-short"></i></a></button>
+        <button class="tras"><a href="/HTML/agenda2.html"><i class="bi bi-arrow-left-short"></i></a></button>
+        <button class="frente"><a href="/HTML/escolhaCabeleireira.html"><i class="bi bi-arrow-right-short"></i></a></button>
     </div>
 
     <div class="row align-items-center w-100">
         <!-- Imagem (visível apenas em telas médias e maiores) -->
         <div class="col-md-6 d-none d-md-block">
             <div class="bemvindo-img animacao-imagem">
-                <img src="/assets/imagemCabeleleiro.png" class="img-fluid" alt="Imagem dos Cabelereiros">
+                <img src="/assets/imagemServico.png" class="img-fluid" alt="Imagem do salão">
             </div>
         </div>
 
         <!-- Texto e Botão -->
         <div class="col-12 col-md-6">
             <div class="bemvindo-container d-flex flex-column justify-content-center align-items-center text-center text-md-start">
-                <h1 class="titulo">Escolha a profissional</h1>
+                <h1 class="titulo">Escolha o serviço</h1>
                 <p class="boas-vindas">
-                  Escolha uma de nossas especialistas para um atendimento de qualidade e personalizado. Confie em quem entende do assunto e realce sua beleza com cuidado e dedicação!
+                    Escolha o serviço que combina com você! Corte, coloração ou tratamento, estamos aqui para realçar sua beleza. Fale com a gente e juntos encontraremos a opção ideal!
                 </p>
                 <div class="btn-group">
                     <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Selecione a profissional
+                        Selecione o serviço
                     </button>
-                    <ul id="ID_P" class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" id="2">Matheus manicure</a></li>
-                      <li><a class="dropdown-item" href="#" id="dona-lurdes">Dona Lurdes</a></li>
-                      <li><a class="dropdown-item" href="#" id="dona-maria">Dona Maria</a></li>
+                    <ul id="ID_S" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="1">Manicure</a></li>
+                        <li><a class="dropdown-item" href="#" id="4">Pedicure</a></li>
+                        <li><a class="dropdown-item" href="#" id="5">Corte Masculino</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,28 +52,24 @@
     </div>
 </main>
 
-<!-- Redirecionar para a outra pagina -->
-
+<!-- Ir para a outra pagina -->
 <script>
-  // script.js
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Pegue todos os itens do dropdown
-  const donaCleide = document.getElementById('dona-cleide');
-  const donaLurdes = document.getElementById('dona-lurdes');
-  const donaMaria = document.getElementById('dona-maria');
-  const donaCleideAvailable = document.getElementById('dona-cleide-available');
+  // Pegue todas as opções do dropdown
+  const corte = document.getElementById('corte');
+  const manicure = document.getElementById('manicure');
+  const tintura = document.getElementById('tintura');
 
-  // Função para redirecionar para a página de agendamento
-  function redirecionarParaAgendamento() {
-    window.location.href = 'agendamento.html';  // Redireciona para agendamento.html
+  // Função para redirecionar para o HTML desejado
+  function redirecionar() {
+    window.location.href = 'escolhaCabeleireira.html';
   }
 
-  // Adicionando eventos de clique para cada item do dropdown
-  donaCleide.addEventListener('click', redirecionarParaAgendamento);
-  donaLurdes.addEventListener('click', redirecionarParaAgendamento);
-  donaMaria.addEventListener('click', redirecionarParaAgendamento);
-  donaCleideAvailable.addEventListener('click', redirecionarParaAgendamento);
+  // Adicionando o evento de clique em cada item do dropdown
+  corte.addEventListener('click', redirecionar);
+  manicure.addEventListener('click', redirecionar);
+  tintura.addEventListener('click', redirecionar);
 });
 
 </script>

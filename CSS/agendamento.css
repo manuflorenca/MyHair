@@ -1,0 +1,182 @@
+/* Geral */
+body {
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 50px;
+}
+
+/* Estilo para o container das setas */
+.setas-container {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #f2f2f2; 
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave (opcional) */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    display: flex;
+    justify-content: space-between; /* Espaço entre os botões */
+    align-items: center;
+  }
+  
+  /* Estilo para os botões das setas */
+  .setas-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #8C5627; /* Cor do ícone */
+    transition: color 0.3s ease;
+  }
+  
+  .setas-container button a i{
+      color: #8C5627; /* Cor do ícone */
+    text-decoration: none;
+  }
+  
+  
+  .setas-container button a i:hover {
+    color: #401708; /* Cor do ícone ao passar o mouse */
+  }
+
+.img {
+    fill: #401708;
+  }
+  
+
+h1 {
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    color:#401708;
+    margin-bottom: 30px;
+}
+
+.date-input-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mostrarData {
+    background-color: #401708;
+    opacity: 0.8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#mostrarData:hover {
+    background-color: #401708;
+    opacity: 1;
+}
+
+/* Estilizando a tabela */
+
+.tabela-container {
+    display: flex;
+    justify-content: center; /* Centraliza a tabela horizontalmente */
+    align-items: center;     /* Centraliza a tabela verticalmente (se necessário) */
+    padding: 5px;
+    margin: 0 auto;          /* Garante que o contêiner tenha uma margem automática */
+}
+
+#tabela-agenda {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite rolar horizontalmente, se necessário */
+}
+
+#tabela-agenda th {
+    background-color: #8C5627;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+#tabela-agenda td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabela-agenda tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabela-agenda tr:hover {
+    background-color: #e9e9e9;
+}
+
+.container-agendamento-final {
+    display: flex;
+    flex-direction: row; /* Organiza os itens em linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+}
+
+
+.btnFinal{
+    padding: 10px;
+    width: 20em;
+    border-radius: 7px;
+    background: #401708;
+    border: none;
+    opacity: 0.9;
+}
+
+.btnFinal:hover{
+    opacity: 1;
+}
+
+.btnFinal a{
+    text-decoration: none;
+    color: #F2EADF;
+}
+
+/* Ajuste para celular */
+@media screen and (max-width: 768px) {
+    #tabela-agenda th, #tabela-agenda td {
+        padding: 8px;
+    }
+    #mostrarData {
+        padding: 8px 16px;
+    }
+}
+
+/* Input de data */
+#data {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilizando a imagem */
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 150px;
+    height: auto;
+}
+
+/* Cor do parágrafo */
+#resultado {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}

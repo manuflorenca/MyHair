@@ -1,6 +1,5 @@
 const API_URL = 'http://127.0.0.1:5000/profissional'; //http://127.0.0.1:5000/profissional
 
-
 const userForm = document.getElementById('userForm');
 const userTable = document.getElementById('userTable');
 
@@ -20,7 +19,6 @@ userForm.addEventListener("submit", async (e) => {
         adm: document.querySelector("#adm").checked
     };
     
-    
     try {
         const response = await fetch(API_URL, {
             method: "POST",
@@ -32,18 +30,9 @@ userForm.addEventListener("submit", async (e) => {
        
         const result = await response.json();
         alert(result.message || result.error);
+        const form = document.getElementById('userForm');
+        form.reset();
     } catch (error) {
         console.error("Erro ao cadastrar usuário: ", error);
     }
 });
-
-// Função de limpar os inputs (Front)
-
-function handleSubmit(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário, por exemplo, via AJAX
-
-    // Limpar os campos do formulário
-    document.getElementById('userForm').reset();
-}
