@@ -72,8 +72,3 @@ document.querySelector('.login-link').addEventListener('click', function() {
     document.querySelector('.form-box.register').style.display = 'none';
     document.querySelector('.form-box.login').style.display = 'block';
 });
-
-
-
-
-
