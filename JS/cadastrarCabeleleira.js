@@ -8,6 +8,10 @@ document.getElementById('btn_addCompetencia').addEventListener('click', function
     container.classList.toggle('hide');
 });
 
+
+
+
+
 userForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     
@@ -35,4 +39,17 @@ userForm.addEventListener("submit", async (e) => {
     } catch (error) {
         console.error("Erro ao cadastrar usuário: ", error);
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const usuario = sessionStorage.getItem('usuario');
+
+
+    const nomeUsuario=document.querySelector(".nomeDoUsuario");
+
+    nomeUsuario.style.display = 'block';
+    nomeUsuario.innerHTML=usuario
+
+    
+
 });
