@@ -1,0 +1,89 @@
+/* Estilos gerais */
+body {
+    background-color: #F2EADF;
+    font-family: 'Karla', sans-serif;
+    color: #401708;
+}
+
+h1, h2, h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    color: #401708;
+}
+
+.header {
+    background-color: #8C5627;
+    padding: 10px 0;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #8C5627;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #401708;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Formulários */
+.form-control {
+    border: 2px solid #8C5627;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: #401708;
+    box-shadow: none;
+}
+
+/* Tabelas */
+.table {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #8C5627;
+    color: #fff;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
