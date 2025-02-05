@@ -10,7 +10,7 @@ document.getElementById('btn_addCompetencia').addEventListener('click', function
 
 
 
-
+// Batata
 
 userForm.addEventListener("submit", async (e) => {
     e.preventDefault();
