@@ -8,8 +8,6 @@ document.getElementById('btn_addCompetencia').addEventListener('click', function
     container.classList.toggle('hide');
 });
 
-
-
 // Batata
 
 userForm.addEventListener("submit", async (e) => {
