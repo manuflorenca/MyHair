@@ -86,6 +86,62 @@ def inserir_usuario():
     except Exception as e:
         return jsonify({"error inserir usuario": str(e)}), 500
 
+
+# Criar agendamento
+@app.route('/agendamento', methods=['POST'])
+def create_agendamento():
+    data = request.json
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("INSERT INTO agenda (ID_C, ID_S, ID_P, Status, Hora, Dati) VALUES (%s, %s, %s, %s, %s, %s)", 
+                   (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati']))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    
+    return jsonify({"message": "Agendamento criado com sucesso!"}), 201
+
+# Listar agendamentos
+@app.route('/agendamento', methods=['GET'])
+def get_agendamentos():
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM agenda")
+    agendamentos = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    
+    return jsonify(agendamentos), 200
+
+# Atualizar agendamento
+@app.route('/agendamento/<int:id>', methods=['PUT'])
+def update_agendamento(id):
+    data = request.json
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("UPDATE agenda SET ID_C=%s, ID_S=%s, ID_P=%s, Status=%s, Hora=%s, Dati=%s WHERE ID=%s", 
+                   (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati'], id))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    
+    return jsonify({"message": "Agendamento atualizado com sucesso!"}), 200
+
+# Deletar agendamento
+@app.route('/agendamento/<int:id>', methods=['DELETE'])
+def delete_agendamento(id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("DELETE FROM agenda WHERE ID=%s", (id,))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    
+    return jsonify({"message": "Agendamento deletado com sucesso!"}), 200
+
 if __name__ == '__main__':
     app.run( debug=True)
 
