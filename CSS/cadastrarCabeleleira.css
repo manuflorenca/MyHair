@@ -1,89 +1,177 @@
-/* Estilos gerais */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #F2EADF;
-    font-family: 'Karla', sans-serif;
-    color: #401708;
-}
-
-h1, h2, h3 {
     font-family: 'Jost', sans-serif;
-    font-weight: 700;
-    color: #401708;
+    background-color: #F2EADF;
 }
 
+/* Estilização do Cabeçalho */
 .header {
-    background-color: #8C5627;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: #8C5627; /* Cor principal do cabeçalho */
 }
 
-/* Botões */
-.btn-primary {
-    background-color: #8C5627;
+/* Container do menu */
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Botão do menu */
+.menu-btn {
+    background: none;
     border: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #401708;
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-}
-
-/* Formulários */
-.form-control {
-    border: 2px solid #8C5627;
-    border-radius: 5px;
+    cursor: pointer;
     padding: 10px;
 }
 
-.form-control:focus {
-    border-color: #401708;
-    box-shadow: none;
+/* Estilização da Offcanvas */
+.offcanvas {
+    background-color: #260E05; /* Cor de fundo da offcanvas */
 }
 
-/* Tabelas */
-.table {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.offcanvas-header {
+    color: #F2EADF; /* Cor do texto no cabeçalho da offcanvas */
 }
 
-.table th {
+.offcanvas-body {
+    background-color: #F2EADF; /* Cor de fundo da offcanvas body */
+}
+
+.offcanvas-body ul {
+    list-style: none; /* Remove a lista padrão */
+    font-size: larger; /* Aumenta o tamanho da fonte */
+    color: #260E05; /* Cor do texto dos itens da lista */
+}
+
+.offcanvas-body ul li:hover {
+    color: #8C5627; /* Cor ao passar o mouse sobre os itens da lista */
+}
+
+/* Estilização do botão de popup (à direita) */
+#btnPopup {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilização do botão de fechar */
+.icon-close {
+   cursor:pointer;
+   color:#8C5627; /* Cor do ícone de fechar para combinar com o tema */
+}
+
+/* Estilização do nome do usuário */
+.data_person h3 {
+    color: white; /* Nome do usuário em branco para destaque */
+}
+
+
+/* Títulos principais */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #8C5627; /* Destaque no título principal */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Formulários */
+form {
+    background-color: white; /* Fundo branco para contraste */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno do formulário */
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form select:focus {
+    border-color: #8C5627; /* Destaque ao focar nos campos */
+}
+
+/* Botões */
+button,
+.btn {
+    background-color: #8C5627; /* Cor dos botões */
+    color: white; /* Texto dos botões em branco */
+    margin: 3px;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #704a20; /* Cor mais escura ao passar o mouse */
+    color: white; /* Texto dos botões em branco */
+}
+
+.menuBtn{
+    border: none;
+}
+
+.menuBtn:hover{
     background-color: #8C5627;
-    color: #fff;
 }
 
-.table td {
-    vertical-align: middle;
+/* Checkbox estilizado */
+.form-check-input.styled-checkbox {
+    accent-color: #8C5627; /* Cor personalizada do checkbox */
+}
+
+/* Tabela de Profissionais */
+.userTable {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.userTable th,
+.userTable td {
+    padding: 15px;
+}
+
+.userTable th {
+    background-color: #8C5627; /* Cabeçalho da tabela com destaque */
+    color: white; /* Texto do cabeçalho em branco */
+}
+
+.userTable tr:nth-child(even) {
+    background-color: #F2EADF; /* Linhas pares com fundo claro */
+}
+
+/* Estilo para o botão de fechar popup */
+.icon-close {
+   cursor:pointer;
+   color:#8C5627; /* Cor do ícone de fechar para combinar com o tema */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .table th, .table td {
-        font-size: 14px;
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
+   h1 {font-size: 2rem;}
+   h2 {font-size: 1.5rem;}
 }
