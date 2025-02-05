@@ -142,6 +142,16 @@ def delete_agendamento(id):
     
     return jsonify({"message": "Agendamento deletado com sucesso!"}), 200
 
+
+# Listar serviços
+@app.route('/servico', methods=['GET'])
+def get_servicos():
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT ID, Nome_S FROM servico")  # Seleciona apenas id e nome
+    servicos = cursor.fetchall()
+    return jsonify(servicos), 200
+
 if __name__ == '__main__':
     app.run( debug=True)
 
