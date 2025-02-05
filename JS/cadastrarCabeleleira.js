@@ -53,3 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 });
+
+function handleSubmit(event) {
+
+    event.preventDefault(); // Prevent the default form submission behavior
+
+  }
