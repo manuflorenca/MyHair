@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casdatro profissional</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/cadastrarCabeleleira.css">
     <link rel="icon" href="../assets/logo (2).png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <style>
-      body{
-        background-color: #F2EADF;
-      }
-    </style>
 </head>
 <body>
   
   <header class="header" id="navbar">
     <div class="menu-container">
-      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+      <button class="menuBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
   
       <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">
@@ -42,7 +36,7 @@
     <!-- Botão de Popup (à direita) -->
     <a href="#" class="data_person">
         <button id="btnPopup">
-         <!-- 0 <i id="icon" class="iconeUsuario bi bi-person-fill fs-1 text-light"></i> -->
+          <i id="icon" class="iconeUsuario bi bi-person-fill fs-1 text-light"></i>
           <h3 class="nomeDoUsuario">Nome</h3>
         </button>
     </a>
@@ -59,7 +53,6 @@
   </div>
 
     <div>
-        <img class="my-3" src="/assets/person-fill-add.svg" alt="">
         <h1>Cadastrar o(a) Profissional</h1>
     </div>
 
@@ -101,7 +94,6 @@
 
   <h2 class="my-4 text-center my-5 fs-2">Lista de  Profissionais</h2>
 
-
   <table class="userTable container mb-4 p-5">
     <thead>
         <tr>
@@ -117,9 +109,9 @@
             <td class="d-none d-sm-table-cell col-4">email@exemplo.com</td>
             <td class="col-4">
                 <div class="d-flex justify-content-start">
-                    <button class="btn btn-primary mr-2">Editar</button>
-                    <button class="btn btn-danger mr-2">Excluir</button>
-                    <button id="btn_addCompetencia" class="">Adicionar Competência</button>
+                    <button class="btn mr-2">Editar</button>
+                    <button class="btn mr-2">Excluir</button>
+                    <button id="btn_addCompetencia" class="btn">Adicionar Competência</button>
                 </div>
             </td>
         </tr>
@@ -178,8 +170,8 @@
 
 
   </div>
-
-  <script src="/JS/cadastrarCabeleleira.js"></script>
+<script src="/JS/script.js"></script>
+<script src="/JS/cadastrarCabeleleira.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
 </body>
