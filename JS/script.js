@@ -46,7 +46,27 @@ loginLink.addEventListener('click', () => {
     console.log(users); // Verifique o formato dos dados
     
     const user = users.find(user => user.Nome === nome.value && user.Senha === senha.value);
-    if (user) {
+
+    const administrador = user && user.admin; // Verifica se o usuário é um administrador
+    
+    if (user && administrador) {
+        // Lógica para Administrador
+        document.getElementById('adminGreeting').innerText = `Bem-vindo, Admin ${user.Nome}!`;
+        
+        // Exibe apenas o link de cadastro de cabeleireiras
+        document.getElementById('linkCadastrar').style.display = 'block';  // Exibe o link de cadastro de cabeleireiras
+
+        // Oculta todos os outros itens de menu
+        const menuItems = document.querySelectorAll('ul li'); // Seleciona todos os <li> dentro de <ul>
+        menuItems.forEach(item => {
+            if (item.id !== 'linkCadastrar') {  // Se não for o link de cadastro
+                item.style.display = 'none';  // Oculta o item de menu
+            }
+        });
+    }
+
+    else if (user) {
+
         // Se o usuário for encontrado, cria a sessão e redireciona para o menu
         sessionStorage.setItem('usuario', user.Nome);  // Armazena na sessão local do navegador (sessionStorage)
         document.getElementById('userGreeting').innerText = `Bem-vindo, ${user.Nome}! você já está logado`;
@@ -56,7 +76,16 @@ loginLink.addEventListener('click', () => {
         iconeUsuario.style.display = 'none';
         nomeUsuario.style.display = 'block';
         nomeUsuario.innerHTML = `${user.Nome}`
-    } else {
+
+        // Caso seja um usuário comum, todos os itens de menu ficam visíveis
+        const menuItems = document.querySelectorAll('ul li');
+        menuItems.forEach(item => {
+        item.style.display = 'block';  // Exibe todos os itens de menu
+        });
+        
+    }
+
+    else {
         document.getElementById('error-message').innerText = 'Usuário ou senha inválidos.';
     }
  
