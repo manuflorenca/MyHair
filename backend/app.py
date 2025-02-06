@@ -185,6 +185,22 @@ def get_profissionais():
     finally:
         cursor.close()
         conn.close()
+
+@app.route('/selectAdmin/<int:user_id>', methods=['GET'])
+def get_adm(user_id):
+    try:
+        cursor = get_connection()
+        cursor.callproc('GetAdmByUserId', (user_id,))
+        result = cursor.fetchone()
+        cursor.close()
+
+        if result:
+            return jsonify({'Adm': result[0]}), 200
+        else:
+            return jsonify({'error': 'Usuário não encontrado ou sem profissional associado.'}), 404
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
  
  
 if __name__ == '__main__':

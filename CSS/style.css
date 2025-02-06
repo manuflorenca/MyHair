@@ -686,6 +686,10 @@ h2 {
     mix-blend-mode: multiply
   }
 
-  /* Scroll de imagens */
+  /* Header */
+
+  #linkCadastrar {
+    display: none;
+  }
 
   

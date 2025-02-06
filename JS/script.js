@@ -37,6 +37,28 @@ loginLink.addEventListener('click', () => {
     wrapper.classList.remove('active');
 });
 
+
+
+async function getAdmByUserId(userId) {
+    const apiUrl = `http://127.0.0.1:5000/selectAdmin/${userId}`;
+
+    try {
+        const response = await fetch(apiUrl);
+
+        // Verifica se a resposta foi bem-sucedida
+        if (!response.ok) {
+            throw new Error(`Erro: ${response.status} - ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        console.log(`Adm para o usuário ${userId}:`, data.Adm);
+        return data.Adm; // Retorna o valor da coluna Adm
+    } catch (error) {
+        console.error('Erro ao buscar Adm:', error);
+    }
+}
+
+
 // Trocando usuario
 
   userForm.addEventListener('submit', async (e) => {
@@ -47,11 +69,14 @@ loginLink.addEventListener('click', () => {
     
     const user = users.find(user => user.Nome === nome.value && user.Senha === senha.value);
 
-    const administrador = user && user.admin; // Verifica se o usuário é um administrador
-    
-    if (user && administrador) {
+
+    // Fazer um get usando o ID de usario para buscar dentro da entidade profissional se ele é adm
+   
+
+    console.log(getAdmByUserId(user.ID))
+  
+    if (user && isAdm===1) {
         // Lógica para Administrador
-        document.getElementById('adminGreeting').innerText = `Bem-vindo, Admin ${user.Nome}!`;
         
         // Exibe apenas o link de cadastro de cabeleireiras
         document.getElementById('linkCadastrar').style.display = 'block';  // Exibe o link de cadastro de cabeleireiras
@@ -69,6 +94,7 @@ loginLink.addEventListener('click', () => {
 
         // Se o usuário for encontrado, cria a sessão e redireciona para o menu
         sessionStorage.setItem('usuario', user.Nome);  // Armazena na sessão local do navegador (sessionStorage)
+        sessionStorage.setItem('usuarioId',user.ID);
         document.getElementById('userGreeting').innerText = `Bem-vindo, ${user.Nome}! você já está logado`;
         document.getElementById('userGreeting').style.display = 'block';
         document.querySelector('.form-box.login').style.display = 'none'; // Oculta a caixa de login
