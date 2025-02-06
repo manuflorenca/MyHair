@@ -1,6 +1,7 @@
 const listaServico = document.getElementById('ID_S');
 const API_URL = 'http://127.0.0.1:5000/servico';
 
+
 document.addEventListener('DOMContentLoaded', async function() {
   try {
     const servico = await fetch(API_URL);
@@ -14,10 +15,14 @@ document.addEventListener('DOMContentLoaded', async function() {
       listaServico.innerHTML += `<option value="${valor.Nome_S}">${valor.Nome_S}</option>`;
     });
 
-  } catch (erro) {
+  }
+  
+  catch (erro) {
     console.log("Erro ao carregar o serviço:", erro);
   }
 });
+
+
 
 // Adicionando o evento de 'change' para redirecionar ao escolher a opção
 listaServico.addEventListener('change', function() {
@@ -26,3 +31,4 @@ listaServico.addEventListener('change', function() {
     window.location.href = `escolhaCabeleireira.html?servico=${encodeURIComponent(servicoEscolhido)}`;
   }
 });
+

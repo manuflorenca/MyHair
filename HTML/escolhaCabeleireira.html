@@ -36,14 +36,11 @@
                   Escolha uma de nossas especialistas para um atendimento de qualidade e personalizado. Confie em quem entende do assunto e realce sua beleza com cuidado e dedicação!
                 </p>
                 <div class="btn-group">
-                    <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- <button class="btnDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Selecione a profissional
-                    </button>
-                    <ul id="ID_P" class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" id="2">Matheus manicure</a></li>
-                      <li><a class="dropdown-item" href="#" id="71">Rogerio</a></li>
-                      <li><a class="dropdown-item" href="#" id="72">Manuela</a></li>
-                    </ul>
+                    </button> -->
+                    <select id="ID_P" class=" btnDrop  dropdown-toggle dropdown-menu">
+                    </select>
                 </div>
             </div>
         </div>
@@ -55,28 +52,29 @@
 <script>
   // script.js
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Pegue todos os itens do dropdown
-  const donaCleide = document.getElementById('2');
-  const donaLurdes = document.getElementById('71');
-  const donaMaria = document.getElementById('72');
-  const donaCleideAvailable = document.getElementById('dona-cleide-available');
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Pegue todos os itens do dropdown
+//   const donaCleide = document.getElementById('2');
+//   const donaLurdes = document.getElementById('71');
+//   const donaMaria = document.getElementById('72');
+//   const donaCleideAvailable = document.getElementById('dona-cleide-available');
 
-  // Função para redirecionar para a página de agendamento
-  function redirecionarParaAgendamento() {
-    window.location.href = 'agendamento.html';  // Redireciona para agendamento.html
-  }
+//   // Função para redirecionar para a página de agendamento
+//   function redirecionarParaAgendamento() {
+//     window.location.href = 'agendamento.html';  // Redireciona para agendamento.html
+//   }
 
-  // Adicionando eventos de clique para cada item do dropdown
-  donaCleide.addEventListener('click', redirecionarParaAgendamento);
-  donaLurdes.addEventListener('click', redirecionarParaAgendamento);
-  donaMaria.addEventListener('click', redirecionarParaAgendamento);
-  donaCleideAvailable.addEventListener('click', redirecionarParaAgendamento);
-});
+//   // Adicionando eventos de clique para cada item do dropdown
+//   donaCleide.addEventListener('click', redirecionarParaAgendamento);
+//   donaLurdes.addEventListener('click', redirecionarParaAgendamento);
+//   donaMaria.addEventListener('click', redirecionarParaAgendamento);
+//   donaCleideAvailable.addEventListener('click', redirecionarParaAgendamento);
+// });
 
 </script>
 
 <script src="../JS/script.js"></script>
+<script src="/JS/profissional.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
 </body>

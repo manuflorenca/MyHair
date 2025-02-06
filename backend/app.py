@@ -152,6 +152,15 @@ def get_servicos():
     servicos = cursor.fetchall()
     return jsonify(servicos), 200
 
+@app.route('/profissional', methods=['GET'])
+def get_profissionais():
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT ID, ID_U FROM profissional")  # Seleciona apenas id e nome
+    profissionais = cursor.fetchall()
+    return jsonify(profissionais), 200
+
+
 if __name__ == '__main__':
     app.run( debug=True)
 
