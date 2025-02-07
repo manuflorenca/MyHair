@@ -34,6 +34,16 @@ body {
     padding: 10px;
 }
 
+.menu-btn:hover{
+    background-color:transparent;
+}
+
+.btn-add-competencia{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 /* Estilização da Offcanvas */
 .offcanvas {
     background-color: #260E05; /* Cor de fundo da offcanvas */
@@ -137,6 +147,11 @@ button:hover,
 
 .menuBtn:hover{
     background-color: #8C5627;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Checkbox estilizado */

@@ -22,11 +22,11 @@
  
   <header class="header" id="navbar">
     <div class="menu-container">
-      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
+      <button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1 text-light" ></i></button>
  
       <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">
-          <button type="button" id="btnClose" class="bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" id="btnClose" class="menu-btn bi bi-x-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul>
@@ -42,7 +42,6 @@
     <!-- Botão de Popup (à direita) -->
     <a href="#" class="data_person">
         <button id="btnPopup">
-         <!-- 0 <i id="icon" class="iconeUsuario bi bi-person-fill fs-1 text-light"></i> -->
           <h3 class="nomeDoUsuario">Nome</h3>
         </button>
     </a>
@@ -51,7 +50,7 @@
   <!-- Tela de login  -->
   <div class="wrapper">
     <span class="icon-close" style="cursor:pointer;">
-        <i class="bi bi-x-lg"></i>
+       
     </span>
    
     <div id="userGreeting" style="display:none; margin-bottom: 20px;"></div> <!-- Espaço para exibir o nome do usuário -->
@@ -59,8 +58,7 @@
   </div>
  
     <div>
-        <img class="my-3" src="/assets/person-fill-add.svg" alt="">
-        <h1>Cadastrar o(a) Profissional</h1>
+        <h1 class="m-5">Cadastrar o(a) Profissional</h1>
     </div>
  
   <!-- Formulário para adicionar usuário -->
@@ -79,7 +77,7 @@
                     <label for="adm" class="form-check-label">O usuário vai ser administrador?</label>
                 </div>
                
-                <button class="my-2 btn btn-primary" type="submit">Cadastrar</button>
+                <button class="my-2 btn" type="submit">Cadastrar</button>
             </form>
         </div>
     </div>
@@ -117,9 +115,9 @@
             <td class="d-none d-sm-table-cell col-4">email@exemplo.com</td>
             <td class="col-4">
                 <div class="d-flex justify-content-start">
-                    <button class="btn btn-primary mr-2">Editar</button>
-                    <button class="btn btn-danger mr-2">Excluir</button>
-                    <button id="btn_addCompetencia" class="">Adicionar Competência</button>
+                    <button class="btn mr-2">Editar</button>
+                    <button class="btn mr-2">Excluir</button>
+                    <button id="btn_addCompetencia" class="btn-add-competencia">Adicionar Competência</button>
                 </div>
             </td>
         </tr>

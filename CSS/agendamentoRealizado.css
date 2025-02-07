@@ -1,19 +1,67 @@
-*{
-    font-family: "Karla", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-
-}
-
-
+/* Definindo a fonte principal e a cor de fundo */
 body {
+    font-family: 'Jost', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-color: #F2F2F2 ;
-    width: 100vw;
-    height: 100vh;
 }
 
+/* Estilo para o título principal */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #401708;
+    font-size: 2.5rem;
+}
 
+/* Estilo para os subtítulos */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
 
+/* Estilo para a caixa de confirmação */
+.confirmacao-container {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os textos dentro da confirmação */
+.confirmacao-container p {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+/* Estilo para os links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a seção de links, centralizando e ajustando o espaçamento */
+p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Adicionando um espaço maior no final da página */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #777;
+}
