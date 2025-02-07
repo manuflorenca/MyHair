@@ -1,5 +1,7 @@
+import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from datetime import datetime
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para todas as rotas
 from db import get_connection
@@ -217,6 +219,13 @@ def get_adm(user_id):
         if conn:
             conn.close()  # Certifique-se de fechar a conexão
  
+@app.route('/datahora', methods=['GET'])
+def get_data_hora():
+    # Obtém a data e hora atual
+    agora = datetime.now()
+    data_hora = agora.strftime("%Y-%m-%d %H:%M:%S")  # Formato: YYYY-MM-DD HH:MM:SS
+    return jsonify({"data_hora": data_hora})
+
 if __name__ == '__main__':
     app.run( debug=True)
  
