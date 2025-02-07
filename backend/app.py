@@ -186,22 +186,36 @@ def get_profissionais():
         cursor.close()
         conn.close()
 
+import logging
+
+import logging
+from flask import jsonify
+
 @app.route('/selectAdmin/<int:user_id>', methods=['GET'])
 def get_adm(user_id):
+    conn = None
     try:
-        cursor = get_connection()
-        cursor.callproc('GetAdmByUserId', (user_id,))
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        # Chame o procedimento armazenado usando execute
+        cursor.execute("CALL GetAdmByUserId(%s)", (user_id,))
         result = cursor.fetchone()
-        cursor.close()
 
         if result:
-            return jsonify({'Adm': result[0]}), 200
+            return jsonify({'Adm': result['Adm']}), 200  # Acesse pelo nome da coluna
         else:
             return jsonify({'error': 'Usuário não encontrado ou sem profissional associado.'}), 404
 
     except Exception as e:
+        logging.error(f"Erro ao buscar Adm para o usuário {user_id}: {str(e)}")
         return jsonify({'error': str(e)}), 500
- 
+
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()  # Certifique-se de fechar a conexão
  
 if __name__ == '__main__':
     app.run( debug=True)
