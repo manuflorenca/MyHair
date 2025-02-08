@@ -113,8 +113,29 @@ def create_agendamento():
 def get_agendamentos():
     conn = get_connection()
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM agenda")
+    cursor.execute("""SELECT S.NOME_S, U.NOME, A.STATUS, A.HORA, A.DATI
+                   FROM AGENDA A 
+                   INNER JOIN
+                   SERVICO S
+                   ON A.ID_S=S.ID
+                   INNER JOIN 
+                   PROFISSIONAL P
+                   ON A.ID_P=P.ID
+                   INNER JOIN
+                   USUARIO U
+                   ON P.ID_U=U.ID
+                   """)
     agendamentos = cursor.fetchall()
+    for item in agendamentos:
+        # Converte timedelta para HH:MM:SS
+        total_seconds = int(item['HORA'].total_seconds())
+        horas = total_seconds // 3600
+        minutos = (total_seconds % 3600) // 60
+        segundos = total_seconds % 60
+        item['HORA'] = f"{horas:02}:{minutos:02}:{segundos:02}"
+        
+        # Converte date para YYYY-MM-DD
+        item['DATI'] = item['DATI'].isoformat()  # ou item['DATI'].strftime('%Y-%m-%d')
     cursor.close()
     conn.close()
    

@@ -151,6 +151,27 @@ const BtnHora = document.getElementById('hora');
 
 // Função para capturar os dados da tabela
 
+window.addEventListener("load", async (e)=>{
+    const response= await fetch(API_URL)
+    const tabelaComValores = await response.json()
+
+    const tabelaBody = document.querySelector('#tabela-agenda tbody');
+        tabelaBody.innerHTML = ''; // Limpa a tabela antes de adicionar
+
+        tabelaComValores.forEach(agendamento => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <th scope="row">${agendamento.NOME_S}</th>
+                <td>${agendamento.NOME}</td>
+                <td>${agendamento.STATUS}</td>
+                <td>${agendamento.HORA}</td>
+                <td>${agendamento.DATI}</td>
+            `;
+            tabelaBody.appendChild(tr);
+        })
+
+});
+
 function capturarDadosTabela() {
     const tabela = document.getElementById('tabela-agenda');
     const linhas = tabela.getElementsByTagName('tr');
@@ -171,12 +192,11 @@ function capturarDadosTabela() {
 }
 
 // Chamar a função e exibir os dados no console
-const resultado = capturarDadosTabela();
-console.log(resultado);
 
 // botão de confirmar
 
 BtnConfirmarAgendamento.addEventListener("click", async e => {
+    const resultado = capturarDadosTabela();
     const agendamentoAtual = {
         profissional: sessionStorage.getItem("nomeProfissional"),
         horario: BtnHora.value,
@@ -193,7 +213,7 @@ BtnConfirmarAgendamento.addEventListener("click", async e => {
                 agendamento.data === agendamentoAtual.data) {
                     return 
                 }          
-                console.log("aaa")
+
             const agendamentoFinal = {
                 nome_cliente: sessionStorage.getItem("usuario"),
                 nome_servico: sessionStorage.getItem("nomeServico"),
@@ -208,7 +228,7 @@ BtnConfirmarAgendamento.addEventListener("click", async e => {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(agendamentoFinal)
                 });
-                
+
                 sessionStorage.setItem("horario",agendamentoFinal.Hora);
                 sessionStorage.setItem("data",agendamentoFinal.Dati);
 
@@ -219,9 +239,9 @@ BtnConfirmarAgendamento.addEventListener("click", async e => {
                 }
             } catch (error) {
                 console.error("Erro na requisição:", error);
-            }
+            };
         // }
-    }
+    };
 });
 
 
