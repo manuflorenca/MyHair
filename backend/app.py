@@ -93,11 +93,15 @@ def inserir_usuario():
 @app.route('/agendamento', methods=['POST'])
 def create_agendamento():
     data = request.json
+    print(data)
     conn = get_connection()
     cursor = conn.cursor()
    
-    cursor.execute("INSERT INTO agenda (ID_C, ID_S, ID_P, Status, Hora, Dati) VALUES (%s, %s, %s, %s, %s, %s)",
-                   (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati']))
+    # cursor.execute("INSERT INTO agenda (ID_C, ID_S, ID_P, Status, Hora, Dati) VALUES (%s, %s, %s, %s, %s, %s)",
+    #                (data['ID_C'], data['ID_S'], data['ID_P'], data['Status'], data['Hora'], data['Dati']))
+    
+    cursor.execute("CALL AgendarServicoPorNome(%s,%s,%s,%s,%s)",
+                   (data['nome_cliente'], data['nome_profissional'], data['nome_servico'], data['Hora'], data['Dati']))
     conn.commit()
     cursor.close()
     conn.close()

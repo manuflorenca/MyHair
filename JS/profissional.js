@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 listaProfissional.addEventListener('change', function() {
   const profissionalEscolhido = listaProfissional.value; // Pega o valor da opção selecionada
   if (profissionalEscolhido) {
+    sessionStorage.setItem("nomeProfissional",profissionalEscolhido);
     window.location.href = `agendamento.html?profissional=${encodeURIComponent(profissionalEscolhido)}`;
   }
 });

@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 listaServico.addEventListener('change', function() {
   const servicoEscolhido = listaServico.value; // Pega o valor da opção selecionada
   if (servicoEscolhido) {
+    sessionStorage.setItem("nomeServico",servicoEscolhido);
     window.location.href = `escolhaCabeleireira.html?servico=${encodeURIComponent(servicoEscolhido)}`;
   }
 });
