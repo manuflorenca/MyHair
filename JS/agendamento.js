@@ -208,9 +208,12 @@ BtnConfirmarAgendamento.addEventListener("click", async e => {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(agendamentoFinal)
                 });
+                
+                sessionStorage.setItem("horario",agendamentoFinal.Hora);
+                sessionStorage.setItem("data",agendamentoFinal.Dati);
 
                 if (response.ok) {
-                    console.log("Agendamento confirmado com sucesso!");
+                    window.location.href="agendamentoRealizado.html";
                 } else {
                     console.error("Erro ao confirmar agendamento.");
                 }
