@@ -203,45 +203,74 @@ BtnConfirmarAgendamento.addEventListener("click", async e => {
         data: BtnData.value
     };
 
-    for (const agendamento of resultado) {
-
-        // if (agendamento.profissional != agendamentoAtual.profissional &&
-        //     agendamento.horario != agendamentoAtual.horario &&
-        //     agendamento.data != agendamentoAtual.data) {
-            if (agendamento.profissional === agendamentoAtual.profissional &&
-                agendamento.horario === agendamentoAtual.horario &&
-                agendamento.data === agendamentoAtual.data) {
-                    return 
-                }          
-
-            const agendamentoFinal = {
-                nome_cliente: sessionStorage.getItem("usuario"),
-                nome_servico: sessionStorage.getItem("nomeServico"),
-                nome_profissional: agendamentoAtual.profissional,
-                Hora: agendamentoAtual.horario,
-                Dati: agendamentoAtual.data 
-            };
-
-            try {
-                const response = await fetch(API_URL, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(agendamentoFinal)
-                });
-
-                sessionStorage.setItem("horario",agendamentoFinal.Hora);
-                sessionStorage.setItem("data",agendamentoFinal.Dati);
-
-                if (response.ok) {
-                    window.location.href="agendamentoRealizado.html";
-                } else {
-                    console.error("Erro ao confirmar agendamento.");
-                }
-            } catch (error) {
-                console.error("Erro na requisição:", error);
-            };
-        // }
+// Supondo que resultado e agendamentoAtual já estejam definidos
+if (resultado.length === 0) {
+    // Se o array resultado estiver vazio, cria o agendamento diretamente
+    const agendamentoFinal = {
+        nome_cliente: sessionStorage.getItem("usuario"),
+        nome_servico: sessionStorage.getItem("nomeServico"),
+        nome_profissional: agendamentoAtual.profissional,
+        Hora: agendamentoAtual.horario,
+        Dati: agendamentoAtual.data 
     };
+
+    try {
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(agendamentoFinal)
+        });
+
+        sessionStorage.setItem("horario", agendamentoFinal.Hora);
+        sessionStorage.setItem("data", agendamentoFinal.Dati);
+
+        if (response.ok) {
+            window.location.href = "agendamentoRealizado.html";
+        } else {
+            console.error("Erro ao confirmar agendamento.");
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+    }
+} else {
+    // Se o array resultado não estiver vazio, verifica os agendamentos existentes
+    for (const agendamento of resultado) {
+        if (agendamento.profissional === agendamentoAtual.profissional &&
+            agendamento.horario === agendamentoAtual.horario &&
+            agendamento.data === agendamentoAtual.data) {
+            return; // Se já existe um agendamento igual, não faz nada
+        }
+    
+
+    // Se não encontrou um agendamento igual, cria o novo agendamento
+    const agendamentoFinal = {
+        nome_cliente: sessionStorage.getItem("usuario"),
+        nome_servico: sessionStorage.getItem("nomeServico"),
+        nome_profissional: agendamentoAtual.profissional,
+        Hora: agendamentoAtual.horario,
+        Dati: agendamentoAtual.data 
+    };
+
+    try {
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(agendamentoFinal)
+        });
+
+        sessionStorage.setItem("horario", agendamentoFinal.Hora);
+        sessionStorage.setItem("data", agendamentoFinal.Dati);
+
+        if (response.ok) {
+            window.location.href = "agendamentoRealizado.html";
+        } else {
+            console.error("Erro ao confirmar agendamento.");
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+    }
+}
+}
 });
 
 
